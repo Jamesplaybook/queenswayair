@@ -1,0 +1,11 @@
+<div class="faq-accordion {{ faqClass }}">
+  {% for item in faqItems %}
+  <details class="faq-item">
+    <summary class="faq-item__question">
+      {{ item.q }}
+      <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+    </summary>
+    <div class="faq-item__answer"><p>{{ item.a }}</p></div>
+  </details>
+  {% endfor %}
+</div>

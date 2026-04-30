@@ -1,0 +1,16 @@
+---
+permalink: /sitemap.xml
+excludeFromSitemap: true
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for page in collections.allPages %}
+  <url>
+    <loc>{{ site.url }}{{ page.url }}</loc>
+    <lastmod>{{ page.date | dateISO }}</lastmod>
+    <changefreq>{% if page.url == "/" %}weekly{% elseif "/blog/" in page.url %}monthly{% else %}monthly{% endif %}</changefreq>
+    <priority>{% if page.url == "/" %}1.0{% elseif "/services/" in page.url or "/service-areas/" in page.url %}0.8{% else %}0.6{% endif %}</priority>
+  </url>
+  {% endfor %}
+</urlset>

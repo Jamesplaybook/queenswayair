@@ -1,0 +1,22 @@
+---
+layout: layouts/base.njk
+title: "Page Not Found"
+description: "The page you're looking for doesn't exist. Queensway Heating and Cooling — HVAC service in Mississauga."
+robots: "noindex"
+permalink: 404.html
+---
+
+<section class="section error-page">
+  <div class="container">
+    <div class="error-page__code" aria-hidden="true">404</div>
+    <h1>Page Not Found</h1>
+    <p>The page you were looking for doesn't exist. Try one of these links instead:</p>
+    <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-bottom:1.5rem;">
+      <a href="/" class="btn btn-primary">Go Home</a>
+      <a href="/services/" class="btn btn-secondary">Our Services</a>
+      <a href="/quote/" class="btn btn-outline">Get a Quote</a>
+      <a href="tel:{{ site.phonePlain }}" class="btn btn-accent">Call {{ site.phone }}</a>
+    </div>
+    <p style="color:var(--color-muted);font-size:0.875rem;">If you think this is a mistake, <a href="/contact/">contact us</a> and we'll help.</p>
+  </div>
+</section>

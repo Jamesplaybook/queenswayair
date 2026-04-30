@@ -1,0 +1,115 @@
+[
+  {
+    "slug": "mississauga",
+    "name": "Mississauga",
+    "metaTitle": "HVAC Repair & Installation in Mississauga | Queensway Heating and Cooling",
+    "metaDescription": "Expert furnace, AC, and heat pump services throughout Mississauga. Queensway Heating and Cooling — local, trusted, and always on time.",
+    "heroHeading": "Heating and Cooling Services in Mississauga",
+    "heroSub": "Queensway Heating and Cooling is Mississauga's local HVAC team — serving homeowners across the city for over 15 years.",
+    "intro": "As Mississauga's home base, Queensway Heating and Cooling knows the city's housing stock, climate, and homeowners better than any out-of-town company. From newer detached homes in Erin Mills to older bungalows in Lakeview, we've installed and repaired heating and cooling systems across every neighbourhood.",
+    "neighborhoods": [
+      "Port Credit", "Streetsville", "Erin Mills", "Meadowvale",
+      "Clarkson", "Lorne Park", "Cooksville", "Hurontario",
+      "City Centre", "Malton", "Lakeview", "Mineola",
+      "Churchill Meadows", "East Credit", "Lisgar"
+    ],
+    "geo": { "lat": 43.5890, "lng": -79.6441 },
+    "wikidataSameAs": "https://www.wikidata.org/wiki/Q40512"
+  },
+  {
+    "slug": "oakville",
+    "name": "Oakville",
+    "metaTitle": "HVAC Repair & Installation in Oakville | Queensway Heating and Cooling",
+    "metaDescription": "Furnace repair, AC installation, and heat pump services in Oakville. Licensed HVAC technicians serving all Oakville neighbourhoods.",
+    "heroHeading": "Heating and Cooling Services in Oakville",
+    "heroSub": "Reliable HVAC service for Oakville homeowners — same-day emergency appointments available.",
+    "intro": "Queensway Heating and Cooling serves Oakville homeowners with the same care and quality we bring to every job across the GTA. Whether you're in Old Oakville or a new build in Dundas, we'll get your system running right.",
+    "neighborhoods": [
+      "Old Oakville", "Bronte", "Kerr Village", "River Oaks",
+      "Glen Abbey", "Palermo", "Clearview", "Dundas",
+      "West Oak Trails", "Iroquois Ridge"
+    ],
+    "geo": { "lat": 43.4675, "lng": -79.6877 },
+    "wikidataSameAs": "https://www.wikidata.org/wiki/Q47931"
+  },
+  {
+    "slug": "brampton",
+    "name": "Brampton",
+    "metaTitle": "HVAC Repair & Installation in Brampton | Queensway Heating and Cooling",
+    "metaDescription": "Furnace repair, AC installation, and heat pump services in Brampton. Fast, same-day service. Call Queensway Heating and Cooling.",
+    "heroHeading": "Heating and Cooling Services in Brampton",
+    "heroSub": "Queensway serves Brampton homeowners with fast, honest HVAC service across every neighbourhood.",
+    "intro": "From Bramalea to Heart Lake, Queensway Heating and Cooling provides reliable furnace, air conditioner, and heat pump services to Brampton's growing community of homeowners.",
+    "neighborhoods": [
+      "Bramalea", "Heart Lake", "Sandringham", "Brampton West",
+      "Downtown Brampton", "Fletcher's Meadow", "Gore Meadows",
+      "Springdale", "Bram West", "Castlemore"
+    ],
+    "geo": { "lat": 43.7315, "lng": -79.7624 },
+    "wikidataSameAs": "https://www.wikidata.org/wiki/Q48705"
+  },
+  {
+    "slug": "etobicoke",
+    "name": "Etobicoke",
+    "metaTitle": "HVAC Repair & Installation in Etobicoke | Queensway Heating and Cooling",
+    "metaDescription": "Expert furnace, AC, and heat pump services in Etobicoke, Toronto. Same-day appointments. Queensway Heating and Cooling.",
+    "heroHeading": "Heating and Cooling Services in Etobicoke",
+    "heroSub": "Serving Etobicoke homeowners with fast, professional HVAC service — from Islington to The Kingsway.",
+    "intro": "Etobicoke's older housing stock — from 1950s bungalows in Alderwood to newer condos near Humber Bay — demands HVAC expertise. Queensway's technicians have the experience to handle any system, any age.",
+    "neighborhoods": [
+      "Alderwood", "Long Branch", "New Toronto", "Mimico",
+      "Islington Village", "The Kingsway", "Princess-Rosethorn",
+      "Richview", "Humber Heights", "Rexdale", "Elms-Old Rexdale"
+    ],
+    "geo": { "lat": 43.6205, "lng": -79.5132 },
+    "wikidataSameAs": "https://www.wikidata.org/wiki/Q5403851"
+  },
+  {
+    "slug": "milton",
+    "name": "Milton",
+    "metaTitle": "HVAC Repair & Installation in Milton | Queensway Heating and Cooling",
+    "metaDescription": "Furnace, air conditioner, and heat pump services in Milton, ON. Queensway Heating and Cooling — fast, reliable, and local.",
+    "heroHeading": "Heating and Cooling Services in Milton",
+    "heroSub": "Growing families in Milton trust Queensway Heating and Cooling for fast, honest HVAC service.",
+    "intro": "Milton's rapid growth means many homeowners have newer HVAC systems that still need expert maintenance and the occasional repair. Queensway services all brands found in Milton's new builds.",
+    "neighborhoods": [
+      "Beaty", "Clarke", "Coates", "Dempsey",
+      "Harrison", "Hawthorne Village", "Scott", "Timberlea",
+      "Willmott", "Campbellville"
+    ],
+    "geo": { "lat": 43.5083, "lng": -79.8827 },
+    "wikidataSameAs": "https://www.wikidata.org/wiki/Q980244"
+  },
+  {
+    "slug": "burlington",
+    "name": "Burlington",
+    "metaTitle": "HVAC Repair & Installation in Burlington | Queensway Heating and Cooling",
+    "metaDescription": "Furnace, AC, and heat pump services in Burlington, ON. Same-day emergency service. Call Queensway Heating and Cooling.",
+    "heroHeading": "Heating and Cooling Services in Burlington",
+    "heroSub": "From Alton Village to the waterfront, Queensway Heating and Cooling keeps Burlington homes comfortable all year.",
+    "intro": "Burlington homeowners deserve fast, reliable HVAC service — whether you're in a lakefront home or a newer neighbourhood north of the QEW. Queensway provides honest assessments and quality workmanship, guaranteed.",
+    "neighborhoods": [
+      "Alton Village", "Brant Hills", "Corporate", "Downtown Burlington",
+      "LaSalle", "Millcroft", "Orchard", "Palmer",
+      "Roseland", "Tyandaga"
+    ],
+    "geo": { "lat": 43.3255, "lng": -79.7990 },
+    "wikidataSameAs": "https://www.wikidata.org/wiki/Q47923"
+  },
+  {
+    "slug": "toronto",
+    "name": "Toronto",
+    "metaTitle": "HVAC Repair & Installation in Toronto | Queensway Heating and Cooling",
+    "metaDescription": "Furnace, AC, and heat pump repair and installation in Toronto. Same-day service. All brands. Call Queensway Heating and Cooling.",
+    "heroHeading": "Heating and Cooling Services in Toronto",
+    "heroSub": "Queensway Heating and Cooling serves Toronto homeowners from Etobicoke to Scarborough — fast, licensed, and reliable.",
+    "intro": "Toronto's diverse housing stock — from Victorian semis to modern condo towers — demands HVAC expertise. Queensway's licensed technicians service all makes and models across the city.",
+    "neighborhoods": [
+      "Etobicoke", "North York", "Scarborough", "East York",
+      "Downtown Toronto", "The Beaches", "Leslieville", "Roncesvalles",
+      "Bloor West Village", "Danforth", "High Park", "Leaside"
+    ],
+    "geo": { "lat": 43.6532, "lng": -79.3832 },
+    "wikidataSameAs": "https://www.wikidata.org/wiki/Q172"
+  }
+]

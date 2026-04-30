@@ -1,0 +1,42 @@
+---
+layout: layouts/base.njk
+title: "HVAC Service Areas — Mississauga, Oakville, Brampton & GTA"
+description: "Queensway Heating and Cooling serves Mississauga, Oakville, Brampton, Etobicoke, Milton, Burlington, Toronto, and surrounding communities."
+---
+
+<div class="page-hero">
+  <div class="container">
+    <h1>HVAC Service Areas</h1>
+    <p>Queensway Heating and Cooling serves homeowners across Mississauga, Oakville, Brampton, Etobicoke, Milton, Burlington, Toronto, and surrounding GTA communities.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="service-grid">
+      {% for area in areas %}
+      <a href="/service-areas/{{ area.slug }}/" class="service-card fade-in">
+        <div class="service-card__title">{{ area.name }}</div>
+        <p class="service-card__blurb">{{ area.heroSub }}</p>
+      </a>
+      {% endfor %}
+    </div>
+
+    <div class="regions" style="background:none;padding-bottom:0;margin-top:3rem;">
+      <h2>All Communities We Serve</h2>
+      <div class="regions__grid">
+        {% for region in regions %}
+        <div class="regions__city">
+          {% if region.slug %}
+          <a href="/service-areas/{{ region.slug }}/">{{ region.name }}</a>
+          {% else %}
+          {{ region.name }}
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include "partials/cta-band.njk" %}

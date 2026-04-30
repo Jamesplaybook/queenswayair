@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Sarah M.",
+    "city": "Mississauga",
+    "citySlug": "mississauga",
+    "rating": 5,
+    "date": "2025-11-14",
+    "text": "My furnace stopped working on the coldest day of the year and Queensway had a technician at my door within 2 hours. He diagnosed the problem quickly, had the part on his truck, and had heat restored before dinner. Absolutely incredible service — I won't call anyone else."
+  },
+  {
+    "name": "David K.",
+    "city": "Oakville",
+    "citySlug": "oakville",
+    "rating": 5,
+    "date": "2025-08-22",
+    "text": "We had Queensway install a new Lennox heat pump this summer. From the quote to the install, everything was transparent and professional. The team explained our rebate options and helped us get over $8,000 back. Highly recommend!"
+  },
+  {
+    "name": "Priya R.",
+    "city": "Brampton",
+    "citySlug": "brampton",
+    "rating": 5,
+    "date": "2025-07-03",
+    "text": "Our AC went out in July and Queensway had it repaired same day. The technician was honest — told us the repair would last and the unit didn't need replacing. That kind of integrity is rare. Five stars without question."
+  },
+  {
+    "name": "James T.",
+    "city": "Etobicoke",
+    "citySlug": "etobicoke",
+    "rating": 5,
+    "date": "2025-12-08",
+    "text": "Signed up for the maintenance plan last year and it's paid for itself already. They caught a cracked heat exchanger during the fall tune-up — could have been a CO situation. These folks are thorough and genuinely care about safety."
+  }
+]

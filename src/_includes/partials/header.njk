@@ -1,0 +1,88 @@
+<header class="site-header" role="banner">
+  <div class="container">
+    <div class="site-header__inner">
+
+      <a href="/" class="site-logo" aria-label="{{ site.name }} — Home">
+        <img src="/assets/img/logo-icon.png" alt="" width="44" height="44" class="site-logo__icon">
+        <span class="site-logo__text">
+          <span class="site-logo__brand">Queensway</span>
+          <span class="site-logo__sub">Heating &amp; Air</span>
+        </span>
+      </a>
+
+      {# Mobile reviews badge (between logo and hamburger) #}
+      <div class="mobile-reviews" aria-label="{{ site.reviewCount }} 5-star reviews">
+        <span class="mobile-reviews__stars" aria-hidden="true">
+          {% for i in range(0, 5) %}
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="#FFC107"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          {% endfor %}
+        </span>
+        <span>{{ site.reviewCount }} Reviews</span>
+      </div>
+
+      {# Desktop nav #}
+      <nav class="main-nav" aria-label="Main navigation">
+        {% for item in navItems %}
+        <div class="main-nav__item">
+          {% if item.children %}
+          <a href="{{ item.url }}" class="main-nav__link" aria-haspopup="true" aria-expanded="false">
+            {{ item.label }}
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="main-nav__dropdown" role="region" aria-label="{{ item.label }} submenu">
+            {% for child in item.children %}
+            <a href="{{ child.url }}">{{ child.label }}</a>
+            {% endfor %}
+          </div>
+          {% else %}
+          <a href="{{ item.url }}" class="main-nav__link{% if item.cta %} main-nav__link--cta{% endif %}">{{ item.label }}</a>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </nav>
+
+      <button class="hamburger" id="hamburger-btn" aria-controls="mobile-nav" aria-expanded="false" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </div>
+</header>
+
+{# Mobile nav overlay #}
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+  <button class="mobile-nav__close" id="mobile-nav-close" aria-label="Close menu">&#x2715;</button>
+
+  <a href="tel:{{ site.phonePlain }}" class="mobile-nav__phone" aria-label="Call {{ site.phone }}">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    {{ site.phone }}
+  </a>
+
+  <ul>
+    {% for item in navItems %}
+    <li class="mobile-nav__item">
+      {% if item.children %}
+      <div class="mobile-nav__link">
+        <a href="{{ item.url }}">{{ item.label }}</a>
+        <button class="submenu-toggle" aria-label="Toggle {{ item.label }} submenu">+</button>
+      </div>
+      <div class="mobile-nav__sub">
+        {% for child in item.children %}
+        <a href="{{ child.url }}">{{ child.label }}</a>
+        {% endfor %}
+      </div>
+      {% else %}
+      <a href="{{ item.url }}" class="mobile-nav__link">{{ item.label }}</a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+
+  <div class="mobile-nav__cta">
+    <a href="tel:{{ site.phonePlain }}" class="btn btn-accent btn-lg">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      Call Now
+    </a>
+    <a href="/quote/" class="btn btn-primary btn-lg">Get a Free Quote</a>
+  </div>
+</nav>

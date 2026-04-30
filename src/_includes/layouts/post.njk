@@ -1,0 +1,45 @@
+---
+layout: layouts/base.njk
+---
+<article>
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="breadcrumb__sep" aria-hidden="true">/</span>
+        <a href="/blog/">Blog</a>
+        <span class="breadcrumb__sep" aria-hidden="true">/</span>
+        <span aria-current="page">{{ title }}</span>
+      </div>
+      <h1>{{ title }}</h1>
+      <p><time datetime="{{ date | dateISO }}">{{ date | dateHuman }}</time></p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="post-content">
+        {{ content | safe }}
+      </div>
+    </div>
+  </section>
+</article>
+
+{% set ctaTitle = "Need HVAC Help? We're Just a Call Away." %}
+{% set ctaText = "Same-day emergency service across Mississauga and the GTA. Licensed, insured, and guaranteed." %}
+{% include "partials/cta-band.njk" %}
+
+{% block schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ title | json }},
+  "datePublished": "{{ date | dateISO }}",
+  "dateModified": "{{ date | dateISO }}",
+  "author": { "@type": "Organization", "name": "{{ site.name }}", "@id": "{{ site.url }}/#organization" },
+  "publisher": { "@type": "Organization", "name": "{{ site.name }}", "@id": "{{ site.url }}/#organization" },
+  "mainEntityOfPage": "{{ site.url }}{{ page.url }}"
+}
+</script>
+{% endblock %}

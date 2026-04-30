@@ -1,0 +1,52 @@
+---
+layout: layouts/base.njk
+title: "Customer Reviews | Queensway Heating and Cooling"
+description: "Read real customer reviews for Queensway Heating and Cooling. Over 450 five-star reviews from homeowners across Mississauga, Oakville, Brampton, and the GTA."
+---
+
+<div class="page-hero">
+  <div class="container">
+    <h1>What Our Customers Say</h1>
+    <p>{{ site.reviewCount }} reviews. {{ site.reviewRating }} stars. Here's what your neighbours think of Queensway Heating and Cooling.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="testimonials__grid" style="grid-template-columns:repeat(auto-fill,minmax(300px,1fr))">
+      {% for review in reviews %}
+      <article class="testimonial-card fade-in">
+        <blockquote class="testimonial-card__quote">"{{ review.text }}"</blockquote>
+        <footer class="testimonial-card__footer">
+          <div class="testimonial-card__stars" aria-label="{{ review.rating }} stars" role="img">
+            {% for i in range(0, review.rating) %}
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            {% endfor %}
+          </div>
+          <span class="testimonial-card__name">{{ review.name }}</span>
+          <span class="testimonial-card__city">
+            {% if review.citySlug %}<a href="/service-areas/{{ review.citySlug }}/">{{ review.city }}</a>{% else %}{{ review.city }}{% endif %}
+          </span>
+        </footer>
+      </article>
+      {% endfor %}
+    </div>
+
+    <div class="review-platforms" style="margin-top:3rem;border:none;padding-top:0;">
+      <div class="review-platforms__grid">
+        <div class="review-platform">
+          <img src="/assets/img/google-reviews-logo.png" alt="Google Reviews" width="140" height="52" loading="lazy">
+          <p>Read all our Google reviews</p>
+          <a href="{{ site.gbpUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View on Google →</a>
+        </div>
+        <div class="review-platform">
+          <img src="/assets/img/homestars-logo.png" alt="HomeStars" width="140" height="52" loading="lazy">
+          <p>Read our HomeStars reviews</p>
+          <a href="{{ site.homestarsUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View on HomeStars →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include "partials/cta-band.njk" %}

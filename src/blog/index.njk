@@ -1,0 +1,40 @@
+---
+layout: layouts/base.njk
+title: "HVAC Tips & Advice Blog | Queensway Heating and Cooling"
+description: "Furnace and air conditioner tips, Ontario rebate guides, and HVAC advice from Queensway Heating and Cooling in Mississauga."
+---
+
+<div class="page-hero">
+  <div class="container">
+    <h1>HVAC Tips &amp; Advice</h1>
+    <p>Practical heating and cooling guides for Mississauga and GTA homeowners — from furnace maintenance to heat pump rebates.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    {% if collections.posts.length %}
+    <div class="blog-grid">
+      {% for post in collections.posts %}
+      <article class="blog-card fade-in">
+        {% if post.data.image %}
+        <div class="blog-card__img">
+          <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt if post.data.imageAlt else post.data.title }}" width="640" height="360" loading="lazy" decoding="async">
+        </div>
+        {% endif %}
+        <div class="blog-card__body">
+          <p class="blog-card__meta"><time datetime="{{ post.date | dateISO }}">{{ post.date | dateHuman }}</time></p>
+          <h2 class="blog-card__title"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+          <p class="blog-card__excerpt">{{ post.data.excerpt if post.data.excerpt else post.templateContent | striptags | truncate(140) }}</p>
+          <a href="{{ post.url }}" class="blog-card__link btn btn-outline btn-sm">Read More →</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p>Blog posts coming soon.</p>
+    {% endif %}
+  </div>
+</section>
+
+{% include "partials/cta-band.njk" %}

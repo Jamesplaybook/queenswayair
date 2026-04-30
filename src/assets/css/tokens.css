@@ -1,0 +1,96 @@
+/* ============================================================
+   TOKENS — change brand here, nowhere else
+   ============================================================ */
+:root {
+  /* --- Brand colors — Queensway Heating & Air Conditioning --- */
+  --color-primary:       #E8392A;   /* CTA / "Book Now" red-coral */
+  --color-primary-dark:  #C52E20;   /* hover darken */
+  --color-primary-light: #F5ADA7;   /* focus border tint */
+  --color-primary-ring:  rgba(232, 57, 42, 0.25);
+
+  --color-secondary:     #1B2A6B;   /* nav / dark sections navy */
+  --color-secondary-dark:#0F1A4A;
+
+  --color-accent:        #1B2A6B;   /* "Call Now" button — same navy */
+  --color-accent-dark:   #0F1A4A;
+
+  --color-body:          #434343;
+  --color-muted:         #6C757D;
+  --color-border:        #CED4DA;
+  --color-bg-alt:        #F6F6F6;   /* alternating section bg */
+  --color-white:         #FFFFFF;
+  --color-dark:          #1A1A2E;
+
+  --color-success:       #28A745;
+  --color-danger:        #DC3545;
+
+  /* --- Typography --- */
+  --font-base: "Poppins", system-ui, -apple-system, sans-serif;
+  --font-size-base:   1rem;        /* 16px */
+  --line-height-base: 1.6;
+  --font-weight-normal: 400;
+  --font-weight-semi:   600;
+  --font-weight-bold:   700;
+
+  /* Type scale */
+  --text-xs:   0.75rem;    /* 12px */
+  --text-sm:   0.875rem;   /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-lg:   1.125rem;   /* 18px */
+  --text-xl:   1.25rem;    /* 20px */
+  --text-2xl:  1.5rem;     /* 24px */
+  --text-3xl:  1.75rem;    /* 28px */
+  --text-4xl:  2rem;       /* 32px */
+  --text-5xl:  2.375rem;   /* 38px */
+
+  /* Fluid heading sizes (match drhvac scale) */
+  --h1-size: clamp(1.875rem, 1.5rem + 2vw, 2.375rem);
+  --h2-size: clamp(1.5rem,   1.25rem + 1.5vw, 2rem);
+  --h3-size: clamp(1.25rem,  1.1rem + 1vw, 1.75rem);
+  --h4-size: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+
+  /* --- Spacing --- */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* --- Radii --- */
+  --radius-pill: 2rem;       /* buttons */
+  --radius-sm:   0.25rem;
+  --radius-md:   0.5rem;
+  --radius-lg:   1rem;
+
+  /* --- Shadows --- */
+  --shadow-sm:  0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md:  0 4px 12px rgba(0,0,0,0.10);
+  --shadow-lg:  0 8px 24px rgba(0,0,0,0.12);
+  --shadow-card-hover: 0 8px 24px rgba(0,0,0,0.10);
+
+  /* --- Transitions --- */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-base: 0.25s ease-in-out;
+
+  /* --- Layout --- */
+  --container-max: 1140px;
+  --container-pad: clamp(1rem, 4vw, 2rem);
+  --section-py:    clamp(3rem, 6vw, 5rem);
+
+  /* Sticky heights (update if header height changes) */
+  --header-height: 60px;     /* main nav height */
+  --utility-height: 42px;    /* top utility bar */
+  --sticky-bar-h:  60px;     /* mobile bottom call bar */
+}
+
+/* Dark mode stub — fill in if needed */
+@media (prefers-color-scheme: dark) {
+  /* :root { ... } */
+}

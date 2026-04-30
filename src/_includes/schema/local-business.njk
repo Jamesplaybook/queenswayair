@@ -1,0 +1,91 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["HVACBusiness", "LocalBusiness"],
+      "@id": "{{ site.url }}/#organization",
+      "name": "{{ site.name }}",
+      "alternateName": "{{ site.nameDBA }}",
+      "legalName": "{{ site.legalName }}",
+      "url": "{{ site.url }}",
+      "telephone": "{{ site.phone }}",
+      "email": "{{ site.email }}",
+      "description": "{{ site.description }}",
+      "priceRange": "{{ site.priceRange }}",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "{{ site.url }}/#logo",
+        "url": "{{ site.url }}/assets/img/logo.svg",
+        "contentUrl": "{{ site.url }}/assets/img/logo.svg"
+      },
+      "image": "{{ site.url }}{{ site.ogImage }}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{ site.address.street }}",
+        "addressLocality": "{{ site.address.city }}",
+        "addressRegion": "{{ site.address.province }}",
+        "postalCode": "{{ site.address.postal }}",
+        "addressCountry": "{{ site.address.country }}"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": {{ site.geo.lat }},
+        "longitude": {{ site.geo.lng }}
+      },
+      "openingHoursSpecification": [
+        {% for spec in site.openingHours %}
+        {% for day in spec.days %}
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "{{ day }}",
+          "opens": "{{ spec.open }}",
+          "closes": "{{ spec.close }}"
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ],
+      "areaServed": [
+        {% for area in areas %}
+        {
+          "@type": "City",
+          "name": "{{ area.name }}",
+          "sameAs": "{{ area.wikidataSameAs }}"
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ],
+      "knowsAbout": [
+        "Furnace installation", "Furnace repair", "Furnace maintenance",
+        "Air conditioner installation", "Air conditioner repair",
+        "Heat pump installation", "Heat pump repair",
+        "Ductless mini-split AC", "Ductless air conditioner",
+        "Water heater installation", "Tankless water heater",
+        "Gas fireplace installation", "Fireplace repair",
+        "HRV installation", "ERV installation", "Heat recovery ventilator",
+        "HVAC maintenance plans", "Emergency HVAC service",
+        "Indoor air quality", "Greener Homes rebates"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "TSSA License",
+          "credentialCategory": "license",
+          "recognizedBy": { "@type": "Organization", "name": "Technical Standards and Safety Authority (TSSA)" }
+        }
+      ],
+      "sameAs": [
+        "{{ site.social.facebook }}",
+        "{{ site.social.instagram }}",
+        "{{ site.gbpUrl }}",
+        "{{ site.homestarsUrl }}"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "{{ site.reviewRating }}",
+        "bestRating": "5",
+        "reviewCount": "{{ site.reviewCount }}"
+      }
+    }
+  ]
+}
+</script>

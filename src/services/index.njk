@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+title: "HVAC Services in Mississauga"
+description: "Queensway Heating and Cooling offers furnace installation and repair, AC installation and repair, heat pumps, water heaters, and maintenance plans across Mississauga and the GTA."
+---
+
+<div class="page-hero">
+  <div class="container">
+    <h1>HVAC Services in Mississauga &amp; the GTA</h1>
+    <p>From emergency furnace repair to new heat pump installations — Queensway Heating and Cooling has you covered.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="service-grid">
+      {% for service in services %}
+      <a href="/services/{{ service.slug }}/" class="service-card fade-in">
+        <div class="service-card__title">{{ service.title }}</div>
+        <p class="service-card__blurb">{{ service.blurb }}</p>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% include "partials/cta-band.njk" %}

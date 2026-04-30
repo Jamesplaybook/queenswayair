@@ -1,0 +1,110 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: services
+  size: 1
+  alias: service
+permalink: "/services/{{ service.slug }}/"
+eleventyComputed:
+  title: "{{ service.metaTitle }}"
+  description: "{{ service.metaDescription }}"
+---
+
+<div class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="breadcrumb__sep" aria-hidden="true">/</span>
+      <a href="/services/">Services</a>
+      <span class="breadcrumb__sep" aria-hidden="true">/</span>
+      <span aria-current="page">{{ service.title }}</span>
+    </nav>
+    <h1>{{ service.heroHeading }}</h1>
+    <p>{{ service.heroSub }}</p>
+    <div style="display:flex;flex-wrap:wrap;gap:1rem;margin-top:1.5rem;">
+      <a href="tel:{{ site.phonePlain }}" class="btn btn-accent btn-lg">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Call: {{ site.phone }}
+      </a>
+      <a href="/quote/" class="btn btn-primary btn-lg">Get a Free Quote</a>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="content-with-sidebar">
+
+      {# Main content #}
+      <div>
+        <p class="lead">{{ service.body }}</p>
+
+        {% if service.benefits %}
+        <h2 style="margin-top:2rem;">What's Included</h2>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;margin-bottom:2rem;">
+          {% for benefit in service.benefits %}
+          <li style="display:flex;align-items:flex-start;gap:0.75rem;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-success)" stroke-width="2.5" style="flex-shrink:0;margin-top:2px" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            {{ benefit }}
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if service.faqs %}
+        <h2>Common Questions About {{ service.title }}</h2>
+        <div class="faq-light" style="margin-bottom:2rem;">
+          {% set faqItems = service.faqs %}
+          {% include "partials/faq.njk" %}
+        </div>
+        {% endif %}
+      </div>
+
+      {# Sidebar #}
+      <aside class="sidebar" aria-label="Contact and service areas">
+        <div class="sidebar-card sidebar-card--primary">
+          <h3>Ready to Book?</h3>
+          <div class="phone-block phone-block--light">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <div>
+              <div class="phone-block__number"><a href="tel:{{ site.phonePlain }}">{{ site.phone }}</a></div>
+              <div class="phone-block__label" style="color:rgba(255,255,255,0.7)">Call any time</div>
+            </div>
+          </div>
+          <a href="/quote/" class="btn btn-outline-white btn-lg" style="width:100%;justify-content:center;margin-top:0.75rem;">Get a Free Quote</a>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Service Areas</h3>
+          <nav class="area-list" aria-label="Cities served">
+            {% for area in areas %}
+            <a href="/service-areas/{{ area.slug }}/">{{ area.name }}</a>
+            {% endfor %}
+          </nav>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>All Services</h3>
+          <nav class="area-list" aria-label="All services">
+            {% for svc in services %}
+            <a href="/services/{{ svc.slug }}/" {% if svc.slug == service.slug %}aria-current="page"{% endif %}>{{ svc.title }}</a>
+            {% endfor %}
+          </nav>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+{% include "partials/cta-band.njk" %}
+
+{% block schema %}
+{% include "schema/service.njk" %}
+{% set breadcrumbItems = [{ name: "Services", url: "/services/" }, { name: service.title, url: "/services/" + service.slug + "/" }] %}
+{% include "schema/breadcrumb.njk" %}
+{% if service.faqs %}
+{% set faqItems = service.faqs %}
+{% include "schema/faq.njk" %}
+{% endif %}
+{% endblock %}

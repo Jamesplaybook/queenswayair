@@ -1,0 +1,132 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: areas
+  size: 1
+  alias: area
+permalink: "/service-areas/{{ area.slug }}/"
+eleventyComputed:
+  title: "{{ area.metaTitle }}"
+  description: "{{ area.metaDescription }}"
+---
+
+<div class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="breadcrumb__sep" aria-hidden="true">/</span>
+      <a href="/service-areas/">Service Areas</a>
+      <span class="breadcrumb__sep" aria-hidden="true">/</span>
+      <span aria-current="page">{{ area.name }}</span>
+    </nav>
+    <h1>{{ area.heroHeading }}</h1>
+    <p>{{ area.heroSub }}</p>
+    <div style="display:flex;flex-wrap:wrap;gap:1rem;margin-top:1.5rem;">
+      <a href="tel:{{ site.phonePlain }}" class="btn btn-accent btn-lg">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Call: {{ site.phone }}
+      </a>
+      <a href="/quote/" class="btn btn-primary btn-lg">Get a Free Quote</a>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="content-with-sidebar">
+
+      <div>
+        <p class="lead">{{ area.intro }}</p>
+
+        <h2>HVAC Services Available in {{ area.name }}</h2>
+        <div class="service-grid" style="margin-bottom:2.5rem;">
+          {% for service in services %}
+          <a href="/services/{{ service.slug }}/" class="service-card">
+            <div class="service-card__title">{{ service.title }}</div>
+            <p class="service-card__blurb">{{ service.blurb }}</p>
+          </a>
+          {% endfor %}
+        </div>
+
+        {% if area.neighborhoods %}
+        <h2>Neighbourhoods We Serve in {{ area.name }}</h2>
+        <p>{{ site.nameDBA }} provides HVAC service throughout {{ area.name }}, including:</p>
+        <ul style="list-style:disc;padding-left:1.5rem;columns:2;gap:1.5rem;margin-bottom:2rem;">
+          {% for n in area.neighborhoods %}
+          <li>{{ n }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+
+        <h2>Why {{ area.name }} Homeowners Choose Queensway</h2>
+        <p>When your furnace fails in a {{ area.name }} winter or your AC breaks down in July, you need a team you can trust. Queensway Heating and Cooling brings the same professionalism, honesty, and technical expertise to every home in {{ area.name }}. We're licensed, insured, and stand behind every job with our satisfaction guarantee.</p>
+
+        <div class="map-embed" style="margin-top:2rem;">
+          <iframe
+            src="https://www.google.com/maps/embed/v1/place?key=YOUR_MAPS_API_KEY&q={{ area.name }},Ontario,Canada"
+            title="Map of {{ area.name }}, Ontario"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+
+      <aside class="sidebar" aria-label="Contact and other service areas">
+        <div class="sidebar-card sidebar-card--primary">
+          <h3>Serving {{ area.name }}</h3>
+          <div class="phone-block phone-block--light">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <div>
+              <div class="phone-block__number"><a href="tel:{{ site.phonePlain }}">{{ site.phone }}</a></div>
+              <div class="phone-block__label" style="color:rgba(255,255,255,0.7)">Same-day service</div>
+            </div>
+          </div>
+          <a href="/quote/" class="btn btn-outline-white btn-lg" style="width:100%;justify-content:center;margin-top:0.75rem;">Get a Free Quote</a>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Other Areas We Serve</h3>
+          <nav class="area-list" aria-label="Other service areas">
+            {% for a in areas %}
+            {% if a.slug != area.slug %}
+            <a href="/service-areas/{{ a.slug }}/">{{ a.name }}</a>
+            {% endif %}
+            {% endfor %}
+          </nav>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+{% include "partials/cta-band.njk" %}
+
+{% block schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HVACBusiness",
+  "name": "{{ site.name }} — {{ area.name }}",
+  "url": "{{ site.url }}/service-areas/{{ area.slug }}/",
+  "@id": "{{ site.url }}/service-areas/{{ area.slug }}/#localbusiness",
+  "parentOrganization": { "@id": "{{ site.url }}/#organization" },
+  "areaServed": {
+    "@type": "City",
+    "name": "{{ area.name }}",
+    "containedInPlace": { "@type": "AdministrativeArea", "name": "Ontario, Canada" },
+    "sameAs": "{{ area.wikidataSameAs }}"
+  },
+  "telephone": "{{ site.phone }}",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "{{ site.address.city }}",
+    "addressRegion": "{{ site.address.province }}",
+    "addressCountry": "{{ site.address.country }}"
+  }
+}
+</script>
+{% set breadcrumbItems = [{ name: "Service Areas", url: "/service-areas/" }, { name: area.name, url: "/service-areas/" + area.slug + "/" }] %}
+{% include "schema/breadcrumb.njk" %}
+{% endblock %}

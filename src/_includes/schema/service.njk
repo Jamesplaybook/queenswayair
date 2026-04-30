@@ -1,0 +1,23 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "{{ site.url }}/services/{{ service.slug }}/#service",
+  "name": "{{ service.title }}",
+  "description": "{{ service.blurb }}",
+  "provider": {
+    "@type": "HVACBusiness",
+    "@id": "{{ site.url }}/#organization"
+  },
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Greater Toronto Area"
+  },
+  "url": "{{ site.url }}/services/{{ service.slug }}/",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "CAD",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
