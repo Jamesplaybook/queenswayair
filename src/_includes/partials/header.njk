@@ -22,7 +22,7 @@
 
       {# Desktop nav #}
       <nav class="main-nav" aria-label="Main navigation">
-        {% for item in navItems %}
+        {% for item in nav %}
         <div class="main-nav__item">
           {% if item.children %}
           <a href="{{ item.url }}" class="main-nav__link" aria-haspopup="true" aria-expanded="false">
@@ -59,7 +59,7 @@
   </a>
 
   <ul>
-    {% for item in navItems %}
+    {% for item in nav %}
     <li class="mobile-nav__item">
       {% if item.children %}
       <div class="mobile-nav__link">

@@ -468,8 +468,8 @@ body.nav-open { overflow: hidden; }
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(43, 34, 77, 0.88) 0%,
-    rgba(24, 93, 148, 0.70) 100%
+    rgba(15, 26, 74, 0.88) 0%,
+    rgba(27, 42, 107, 0.70) 100%
   );
   z-index: 1;
 }
@@ -635,7 +635,7 @@ body.nav-open { overflow: hidden; }
 .quote-band__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(43,34,77,0.90) 0%, rgba(24,93,148,0.80) 100%);
+  background: linear-gradient(135deg, rgba(15,26,74,0.90) 0%, rgba(27,42,107,0.80) 100%);
   z-index: 1;
 }
 
@@ -867,7 +867,7 @@ body.nav-open { overflow: hidden; }
 .faq-section__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(43,34,77,0.92) 0 50%, rgba(43,34,77,0.50) 100%);
+  background: linear-gradient(90deg, rgba(27,42,107,0.92) 0 50%, rgba(27,42,107,0.50) 100%);
   z-index: 1;
 }
 .faq-section__content {
