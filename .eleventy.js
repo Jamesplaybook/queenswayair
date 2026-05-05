@@ -1,6 +1,7 @@
 const Image = require("@11ty/eleventy-img");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const path = require("path");
+const fs = require("fs");
 
 module.exports = function (eleventyConfig) {
   // Plugins
@@ -53,6 +54,23 @@ module.exports = function (eleventyConfig) {
       decoding: "async",
     };
     return Image.generateHTML(metadata, imageAttributes);
+  });
+
+  // Lucide icon shortcode — inlines SVG from lucide-static with class/size/a11y attrs
+  const lucideDir = path.join(__dirname, "node_modules/lucide-static/icons");
+  const iconCache = new Map();
+  eleventyConfig.addShortcode("icon", function (name, classes = "icon", size = 24) {
+    let svg = iconCache.get(name);
+    if (!svg) {
+      svg = fs.readFileSync(path.join(lucideDir, `${name}.svg`), "utf8");
+      iconCache.set(name, svg);
+    }
+    // Lucide SVGs are multi-line; strip existing class/width/height then inject ours
+    return svg
+      .replace(/\s+class="[^"]*"/, "")
+      .replace(/\s+width="[^"]*"/, "")
+      .replace(/\s+height="[^"]*"/, "")
+      .replace(/<svg/, `<svg class="${classes}" width="${size}" height="${size}" aria-hidden="true" focusable="false"`);
   });
 
   // Current year shortcode

@@ -4,12 +4,18 @@ title: "HVAC Tips & Advice Blog | Queensway Heating and Cooling"
 description: "Furnace and air conditioner tips, Ontario rebate guides, and HVAC advice from Queensway Heating and Cooling in Mississauga."
 ---
 
-<div class="page-hero">
-  <div class="container">
-    <h1>HVAC Tips &amp; Advice</h1>
-    <p>Practical heating and cooling guides for Mississauga and GTA homeowners — from furnace maintenance to heat pump rebates.</p>
+<section class="page-hero page-hero--photo" aria-label="HVAC Tips and Advice Blog">
+  <div class="page-hero__bg" aria-hidden="true">
+    {% heroImage "/assets/img/hero/blog-index.jpg", "HVAC tips and homeowner guides", "100vw" %}
   </div>
-</div>
+  <div class="page-hero__overlay" aria-hidden="true"></div>
+  <div class="page-hero__content">
+    <div class="container">
+      <h1>HVAC Tips &amp; Advice</h1>
+      <p>Practical heating and cooling guides for Mississauga and GTA homeowners — from furnace maintenance to heat pump rebates.</p>
+    </div>
+  </div>
+</section>
 
 <section class="section">
   <div class="container">
@@ -17,11 +23,13 @@ description: "Furnace and air conditioner tips, Ontario rebate guides, and HVAC 
     <div class="blog-grid">
       {% for post in collections.posts %}
       <article class="blog-card fade-in">
-        {% if post.data.image %}
         <div class="blog-card__img">
-          <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt if post.data.imageAlt else post.data.title }}" width="640" height="360" loading="lazy" decoding="async">
+          {% if post.data.image %}
+          {% image post.data.image, (post.data.imageAlt if post.data.imageAlt else post.data.title), "(min-width: 768px) 33vw, 100vw", [400,640,800], "" %}
+          {% else %}
+          {% image "/assets/img/blog/post-default.jpg", post.data.title, "(min-width: 768px) 33vw, 100vw", [400,640,800], "" %}
+          {% endif %}
         </div>
-        {% endif %}
         <div class="blog-card__body">
           <p class="blog-card__meta"><time datetime="{{ post.date | dateISO }}">{{ post.date | dateHuman }}</time></p>
           <h2 class="blog-card__title"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 60" width="160" height="60">
+  <!-- Star icon -->
+  <polygon points="22,8 26,18 38,18 28,25 32,36 22,29 12,36 16,25 6,18 18,18" fill="#F4A623"/>
+  <!-- Wordmark -->
+  <text x="46" y="28" font-family="'Poppins','Segoe UI',Arial,sans-serif" font-weight="700" font-size="16" fill="#1A1A2E">Home</text>
+  <text x="46" y="46" font-family="'Poppins','Segoe UI',Arial,sans-serif" font-weight="700" font-size="16" fill="#F4A623">Stars</text>
+</svg>

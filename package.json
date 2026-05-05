@@ -5,12 +5,15 @@
   "scripts": {
     "dev": "eleventy --serve --quiet",
     "build": "eleventy",
-    "build:prod": "NODE_ENV=production eleventy"
+    "build:prod": "NODE_ENV=production eleventy",
+    "generate:images": "node scripts/generate-images.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-img": "^5.0.0",
-    "@11ty/eleventy-plugin-rss": "^2.0.0"
+    "@11ty/eleventy-plugin-rss": "^2.0.0",
+    "lucide-static": "^1.14.0",
+    "openai": "^6.35.0"
   },
   "dependencies": {
     "resend": "^4.0.0"

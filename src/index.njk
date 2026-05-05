@@ -7,13 +7,7 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
 {# ── HERO ────────────────────────────────────────────────────────────────── #}
 <section class="hero" aria-label="Welcome">
   <div class="hero__bg" aria-hidden="true">
-    <img
-      src="/assets/img/hero-home.jpg"
-      alt="Queensway Heating and Cooling technician servicing a furnace in a GTA home"
-      width="1920" height="960"
-      fetchpriority="high"
-      decoding="async"
-    >
+    {% heroImage "/assets/img/hero/hero-home.jpg", "Queensway technician servicing a furnace in a GTA home", "100vw" %}
   </div>
   <div class="hero__overlay" aria-hidden="true"></div>
   <div class="hero__content">
@@ -24,7 +18,7 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
           <p class="hero__sub">Your comfort, guaranteed. Count on Queensway Heating and Cooling for furnace repair, AC installation, and heat pump services in Mississauga, Oakville, Brampton, and the GTA.</p>
           <div class="hero__ctas">
             <a href="tel:{{ site.phonePlain }}" class="btn btn-accent btn-lg" aria-label="Call {{ site.phone }}">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              {% icon "phone", "btn__icon", 20 %}
               Call: {{ site.phone }}
             </a>
             <a href="/quote/" class="btn btn-primary btn-lg">Get a Free Quote</a>
@@ -52,7 +46,7 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
 
       <a href="/services/furnace-installation/" class="service-card fade-in">
         <div class="service-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2"><rect x="12" y="8" width="40" height="48" rx="4"/><rect x="20" y="20" width="24" height="16" rx="2"/><line x1="24" y1="40" x2="24" y2="48"/><line x1="32" y1="40" x2="32" y2="48"/><line x1="40" y1="40" x2="40" y2="48"/></svg>
+          {% icon "flame", "service-card__icon-svg", 40 %}
         </div>
         <div class="service-card__title">Furnace Installation</div>
         <p class="service-card__blurb">New high-efficiency gas furnace installed right the first time — with a warranty you can count on.</p>
@@ -60,7 +54,7 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
 
       <a href="/services/furnace-repair/" class="service-card fade-in">
         <div class="service-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2"><path d="M42 10l-8 8-4-4 8-8a10 10 0 00-12 12L8 36a4 4 0 005.66 5.66L32 24a10 10 0 0010-14z"/><path d="M14 46l4 4"/></svg>
+          {% icon "wrench", "service-card__icon-svg", 40 %}
         </div>
         <div class="service-card__title">Furnace Repair</div>
         <p class="service-card__blurb">Fast furnace repair when you need it most — 24/7 emergency response across the GTA.</p>
@@ -68,7 +62,7 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
 
       <a href="/services/ac-installation/" class="service-card fade-in">
         <div class="service-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="20" width="48" height="24" rx="4"/><line x1="20" y1="44" x2="20" y2="56"/><line x1="44" y1="44" x2="44" y2="56"/><circle cx="32" cy="32" r="7"/><path d="M32 8v12M20 14l6 10M44 14l-6 10"/></svg>
+          {% icon "snowflake", "service-card__icon-svg", 40 %}
         </div>
         <div class="service-card__title">AC Installation</div>
         <p class="service-card__blurb">Cool your home efficiently with a new high-SEER central air conditioner — installed and guaranteed.</p>
@@ -76,7 +70,7 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
 
       <a href="/services/ac-repair/" class="service-card fade-in">
         <div class="service-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="20" width="48" height="24" rx="4"/><line x1="20" y1="44" x2="20" y2="56"/><line x1="44" y1="44" x2="44" y2="56"/><path d="M26 30l4 4 8-8"/></svg>
+          {% icon "thermometer-snowflake", "service-card__icon-svg", 40 %}
         </div>
         <div class="service-card__title">AC Repair</div>
         <p class="service-card__blurb">AC not cooling? We diagnose and fix all brands — same-day appointments available.</p>
@@ -84,7 +78,7 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
 
       <a href="/services/heat-pump-installation/" class="service-card fade-in">
         <div class="service-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 40h48M16 40v-8a16 16 0 0132 0v8"/><path d="M24 40v8h16v-8"/><line x1="32" y1="8" x2="32" y2="16"/><path d="M24 12l8 4 8-4"/></svg>
+          {% icon "thermometer-sun", "service-card__icon-svg", 40 %}
         </div>
         <div class="service-card__title">Heat Pumps</div>
         <p class="service-card__blurb">Heating and cooling in one efficient system — up to $10,600 in government rebates available.</p>
@@ -92,7 +86,7 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
 
       <a href="/services/ductless-ac/" class="service-card fade-in">
         <div class="service-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="14" width="48" height="18" rx="4"/><line x1="16" y1="24" x2="48" y2="24"/><path d="M20 32l-3 10M32 32v10M44 32l3 10"/><rect x="20" y="46" width="24" height="10" rx="2"/></svg>
+          {% icon "air-vent", "service-card__icon-svg", 40 %}
         </div>
         <div class="service-card__title">Ductless AC</div>
         <p class="service-card__blurb">Mini-split systems for homes without ductwork — zoned comfort in any room, year-round.</p>
@@ -100,7 +94,7 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
 
       <a href="/services/water-heater/" class="service-card fade-in">
         <div class="service-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2"><rect x="18" y="8" width="28" height="44" rx="4"/><path d="M26 8V4M38 8V4"/><line x1="32" y1="52" x2="32" y2="60"/><path d="M24 60a8 8 0 0016 0"/><circle cx="32" cy="28" r="8"/></svg>
+          {% icon "droplet", "service-card__icon-svg", 40 %}
         </div>
         <div class="service-card__title">Water Heaters</div>
         <p class="service-card__blurb">Tank and tankless water heaters — installed, repaired, and maintained by licensed gas technicians.</p>
@@ -108,7 +102,7 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
 
       <a href="/services/fireplaces/" class="service-card fade-in">
         <div class="service-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 52V22a4 4 0 014-4h26a4 4 0 014 4v30"/><line x1="6" y1="52" x2="58" y2="52"/><line x1="22" y1="18" x2="22" y2="8"/><line x1="42" y1="18" x2="42" y2="8"/><path d="M32 44c-6 0-10-4-10-9 0-7 10-15 10-15s10 8 10 15c0 5-4 9-10 9z"/></svg>
+          {% icon "flame-kindling", "service-card__icon-svg", 40 %}
         </div>
         <div class="service-card__title">Fireplaces</div>
         <p class="service-card__blurb">Gas fireplace installation, service, and repair — add warmth and ambiance to any room.</p>
@@ -116,7 +110,7 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
 
       <a href="/services/hrv-erv/" class="service-card fade-in">
         <div class="service-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2"><rect x="18" y="18" width="28" height="28" rx="4"/><path d="M8 24l10 0M8 24l5-4M8 24l5 4"/><path d="M56 40l-10 0M56 40l-5-4M56 40l-5 4"/><path d="M26 28l12 8M38 28L26 36"/></svg>
+          {% icon "wind", "service-card__icon-svg", 40 %}
         </div>
         <div class="service-card__title">HRV &amp; ERV</div>
         <p class="service-card__blurb">Fresh air ventilation systems that recover heat — better indoor air quality, lower energy bills.</p>
@@ -124,7 +118,7 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
 
       <a href="/services/maintenance-plans/" class="service-card fade-in">
         <div class="service-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="12" width="48" height="44" rx="4"/><line x1="8" y1="24" x2="56" y2="24"/><line x1="20" y1="8" x2="20" y2="16"/><line x1="44" y1="8" x2="44" y2="16"/><path d="M22 36l6 6 14-14"/></svg>
+          {% icon "calendar-check", "service-card__icon-svg", 40 %}
         </div>
         <div class="service-card__title">Maintenance Plans</div>
         <p class="service-card__blurb">Annual tune-ups plus priority service and member savings — protect your HVAC investment.</p>
@@ -132,7 +126,7 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
 
       <a href="/financing/" class="service-card fade-in">
         <div class="service-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2"><circle cx="32" cy="32" r="24"/><path d="M32 16v6M32 42v6"/><path d="M22 26s0-6 10-6 10 6 10 6-0 6-10 6-10 6-10 6 0 6 10 6 10-6 10-6"/></svg>
+          {% icon "badge-dollar-sign", "service-card__icon-svg", 40 %}
         </div>
         <div class="service-card__title">Rebates &amp; Financing</div>
         <p class="service-card__blurb">Up to $10,600 in Ontario heat pump rebates. Flexible financing on all new equipment.</p>
@@ -150,47 +144,41 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
         <h2 class="trust-strip__heading">Why GTA Homeowners Choose Queensway</h2>
         <div class="trust-tiles">
           <div class="trust-tile fade-in">
-            <div class="trust-tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+            <div class="trust-tile__icon" aria-hidden="true">{% icon "users", "trust-tile__icon-svg" %}</div>
             <span class="trust-tile__text">{{ site.reviewCount }} 5-Star Reviews</span>
           </div>
           <div class="trust-tile fade-in">
-            <div class="trust-tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="trust-tile__icon" aria-hidden="true">{% icon "clock", "trust-tile__icon-svg" %}</div>
             <span class="trust-tile__text">Same-Day Emergency Response</span>
           </div>
           <div class="trust-tile fade-in">
-            <div class="trust-tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="trust-tile__icon" aria-hidden="true">{% icon "shield-check", "trust-tile__icon-svg" %}</div>
             <span class="trust-tile__text">Licensed &amp; Insured (TSSA)</span>
           </div>
           <div class="trust-tile fade-in">
-            <div class="trust-tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+            <div class="trust-tile__icon" aria-hidden="true">{% icon "credit-card", "trust-tile__icon-svg" %}</div>
             <span class="trust-tile__text">Flexible Financing Available</span>
           </div>
           <div class="trust-tile fade-in">
-            <div class="trust-tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+            <div class="trust-tile__icon" aria-hidden="true">{% icon "award", "trust-tile__icon-svg" %}</div>
             <span class="trust-tile__text">Certified Technicians</span>
           </div>
           <div class="trust-tile fade-in">
-            <div class="trust-tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="trust-tile__icon" aria-hidden="true">{% icon "check", "trust-tile__icon-svg" %}</div>
             <span class="trust-tile__text">Quality Guarantee</span>
           </div>
           <div class="trust-tile fade-in">
-            <div class="trust-tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+            <div class="trust-tile__icon" aria-hidden="true">{% icon "dollar-sign", "trust-tile__icon-svg" %}</div>
             <span class="trust-tile__text">Transparent Flat-Rate Pricing</span>
           </div>
           <div class="trust-tile fade-in">
-            <div class="trust-tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+            <div class="trust-tile__icon" aria-hidden="true">{% icon "medal", "trust-tile__icon-svg" %}</div>
             <span class="trust-tile__text">{{ site.yearsInBusiness }}+ Years in Business</span>
           </div>
         </div>
       </div>
       <div class="trust-strip__image fade-in">
-        <img
-          src="/assets/img/trust-photo.jpg"
-          alt="Queensway Heating and Cooling certified HVAC technician"
-          width="640" height="480"
-          loading="lazy"
-          decoding="async"
-        >
+        {% image "/assets/img/sections/trust-tech-photo.jpg", "Queensway certified HVAC technician", "(min-width: 768px) 50vw, 100vw", [400,640,800,1200], "" %}
       </div>
     </div>
   </div>
@@ -199,7 +187,7 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
 {# ── QUOTE FORM + TESTIMONIAL BAND ───────────────────────────────────────── #}
 <section class="quote-band" aria-label="Request a quote">
   <div class="quote-band__bg" aria-hidden="true">
-    <img src="/assets/img/quote-band-bg.jpg" alt="" width="1920" height="960" loading="lazy" decoding="async">
+    {% image "/assets/img/sections/quote-band-bg.jpg", "", "100vw" %}
   </div>
   <div class="quote-band__overlay" aria-hidden="true"></div>
   <div class="container">
@@ -213,23 +201,23 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
         <h2 class="quote-band__title">Why Choose Us</h2>
         <ul class="quote-band__trust-list" role="list">
           <li class="quote-band__trust-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            {% icon "circle-check", "quote-band__trust-icon", 20 %}
             Same-day and emergency HVAC service available
           </li>
           <li class="quote-band__trust-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            {% icon "circle-check", "quote-band__trust-icon", 20 %}
             Transparent pricing — no hidden fees, ever
           </li>
           <li class="quote-band__trust-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            {% icon "circle-check", "quote-band__trust-icon", 20 %}
             TSSA licensed &amp; fully insured technicians
           </li>
           <li class="quote-band__trust-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            {% icon "circle-check", "quote-band__trust-icon", 20 %}
             We help you claim Ontario and federal rebates
           </li>
           <li class="quote-band__trust-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            {% icon "circle-check", "quote-band__trust-icon", 20 %}
             All work backed by our satisfaction guarantee
           </li>
         </ul>
@@ -238,9 +226,7 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
 
         <div class="quote-band__testimonial">
           <div class="stars-img" aria-label="5 stars" role="img">
-            {% for i in range(0, 5) %}
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            {% endfor %}
+            {% set starSize = 18 %}{% for i in range(0, 5) %}{% include "partials/star.njk" %}{% endfor %}
           </div>
           <blockquote>"My furnace stopped working on the coldest day of the year. Queensway had a technician at my door within 2 hours. Incredible service — I won't call anyone else."</blockquote>
           <cite>Sarah M. — <a href="/service-areas/mississauga/" style="color:rgba(255,255,255,0.7)">Mississauga</a></cite>
@@ -261,9 +247,7 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
         <blockquote class="testimonial-card__quote">"{{ review.text }}"</blockquote>
         <footer class="testimonial-card__footer">
           <div class="testimonial-card__stars" aria-label="{{ review.rating }} stars" role="img">
-            {% for i in range(0, review.rating) %}
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            {% endfor %}
+            {% for i in range(0, review.rating) %}{% include "partials/star.njk" %}{% endfor %}
           </div>
           <span class="testimonial-card__name">{{ review.name }}</span>
           <span class="testimonial-card__city">
@@ -285,12 +269,12 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
   <div class="container">
     <div class="review-platforms__grid">
       <div class="review-platform">
-        <img src="/assets/img/homestars-logo.png" alt="HomeStars" width="140" height="52" loading="lazy">
+        <img src="/assets/img/brand-marks/homestars.svg" alt="HomeStars" width="140" height="52" loading="lazy">
         <p>Read our customer reviews on HomeStars</p>
         <a href="{{ site.homestarsUrl }}" target="_blank" rel="noopener noreferrer">Read Reviews →</a>
       </div>
       <div class="review-platform">
-        <img src="/assets/img/google-reviews-logo.png" alt="Google Reviews" width="140" height="52" loading="lazy">
+        <img src="/assets/img/brand-marks/google-reviews.svg" alt="Google Reviews" width="140" height="52" loading="lazy">
         <p>{{ site.reviewCount }} reviews on Google</p>
         <a href="{{ site.gbpUrl }}" target="_blank" rel="noopener noreferrer">Read Reviews →</a>
       </div>
@@ -301,7 +285,7 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
 {# ── FAQ ─────────────────────────────────────────────────────────────────── #}
 <section class="faq-section" aria-label="Frequently asked questions">
   <div class="faq-section__bg" aria-hidden="true">
-    <img src="/assets/img/faq-bg.jpg" alt="" width="1920" height="960" loading="lazy" decoding="async">
+    {% image "/assets/img/sections/faq-bg.jpg", "", "100vw" %}
   </div>
   <div class="faq-section__overlay" aria-hidden="true"></div>
   <div class="container">
