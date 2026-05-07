@@ -457,6 +457,12 @@ body.nav-open { overflow: hidden; }
   inset: 0;
   z-index: 0;
 }
+.hero__bg picture,
+.page-hero__bg picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 .hero__bg img {
   width: 100%;
   height: 100%;
