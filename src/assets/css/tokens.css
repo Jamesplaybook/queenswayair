@@ -87,7 +87,7 @@
   /* Sticky heights (update if header height changes) */
   --header-height: 60px;     /* main nav height */
   --utility-height: 42px;    /* top utility bar */
-  --sticky-bar-h:  60px;     /* mobile bottom call bar */
+  --sticky-bar-h:  56px;     /* mobile bottom call bar */
 }
 
 /* Dark mode stub — fill in if needed */

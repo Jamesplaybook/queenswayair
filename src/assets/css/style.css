@@ -414,6 +414,8 @@ body.nav-open { overflow: hidden; }
   right: 0;
   display: flex;
   z-index: 400;
+  background: var(--color-secondary);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
   box-shadow: 0 -2px 12px rgba(0,0,0,0.15);
 }
 @media (min-width: 992px) { .sticky-call-bar { display: none; } }
@@ -425,7 +427,8 @@ body.nav-open { overflow: hidden; }
   align-items: center;
   justify-content: center;
   gap: var(--space-2);
-  padding: var(--space-4);
+  padding-inline: var(--space-4);
+  min-height: var(--sticky-bar-h);
   font-weight: var(--font-weight-bold);
   font-size: var(--text-sm);
   text-decoration: none;
@@ -971,8 +974,12 @@ details[open] .faq-chevron { transform: rotate(180deg); }
 .site-footer {
   background: var(--color-secondary);
   color: rgba(255,255,255,0.8);
-  padding-block: var(--space-16) var(--space-8);
+  padding-block: var(--space-16)
+    calc(var(--space-8) + var(--sticky-bar-h) + env(safe-area-inset-bottom, 0px));
   font-size: var(--text-sm);
+}
+@media (min-width: 992px) {
+  .site-footer { padding-bottom: var(--space-8); }
 }
 
 .site-footer__grid {
