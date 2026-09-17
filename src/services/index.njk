@@ -30,7 +30,7 @@ description: "Queensway Heating and Cooling offers furnace installation and repa
   </div>
 </section>
 
-{% set galleryItems = projects | slice(0, 8) %}
+{% set galleryItems = projects | limit(8) %}
 {% set galleryHeading = "See Our Work" %}
 {% set galleryIntro = "" %}
 {% include "partials/project-gallery.njk" %}

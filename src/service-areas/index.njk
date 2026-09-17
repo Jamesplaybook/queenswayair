@@ -45,7 +45,7 @@ description: "Queensway Heating and Cooling serves Mississauga, Oakville, Brampt
   </div>
 </section>
 
-{% set galleryItems = projects | slice(0, 8) %}
+{% set galleryItems = projects | limit(8) %}
 {% set galleryHeading = "See Our Work" %}
 {% include "partials/project-gallery.njk" %}
 

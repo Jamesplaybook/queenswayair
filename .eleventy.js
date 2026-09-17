@@ -93,6 +93,11 @@ module.exports = function (eleventyConfig) {
   // JSON stringify filter (for schema output)
   eleventyConfig.addFilter("json", (value) => JSON.stringify(value, null, 2));
 
+  // First-N-items filter. Nunjucks' built-in "slice" filter splits an array
+  // into N groups (Jinja2 pagination semantics) — not a JS-style [0:n] slice —
+  // so it silently returns [] for `arr | slice(0, n)`. Use this instead.
+  eleventyConfig.addFilter("limit", (arr, n) => (arr || []).slice(0, n));
+
   // Collections
   eleventyConfig.addCollection("posts", (collectionApi) =>
     collectionApi.getFilteredByGlob("src/blog/posts/*.md").reverse()

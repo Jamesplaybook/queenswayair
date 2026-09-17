@@ -13,21 +13,46 @@ eleventyComputed:
 
 <div class="page-hero">
   <div class="container">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
+    <nav class="breadcrumb" aria-label="Breadcrumb" style="justify-content:center;">
       <a href="/">Home</a>
       <span class="breadcrumb__sep" aria-hidden="true">/</span>
       <a href="/service-areas/">Service Areas</a>
       <span class="breadcrumb__sep" aria-hidden="true">/</span>
       <span aria-current="page">{{ area.name }}</span>
     </nav>
+
+    <div class="hero-icon-badge" aria-hidden="true">
+      {% icon "map-pin", "hero-icon-badge__svg", 36 %}
+    </div>
+
     <h1>{{ area.heroHeading }}</h1>
     <p>{{ area.heroSub }}</p>
-    <div style="display:flex;flex-wrap:wrap;gap:1rem;margin-top:1.5rem;">
+
+    <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:1.5rem;">
       <a href="tel:{{ site.phonePlain }}" class="btn btn-accent btn-lg">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
         Call: {{ site.phone }}
       </a>
       <a href="/quote/" class="btn btn-primary btn-lg">Get a Free Quote</a>
+    </div>
+
+    <div class="hero-trust-badges">
+      <span class="hero-trust-badge">
+        {% icon "star", "", 16 %}
+        {{ site.reviewRating }}/5 ({{ site.reviewCount }} Reviews)
+      </span>
+      <span class="hero-trust-badge">
+        {% icon "shield-check", "", 16 %}
+        TSSA Licensed &amp; Insured
+      </span>
+      <span class="hero-trust-badge">
+        {% icon "medal", "", 16 %}
+        {{ site.yearsInBusiness }}+ Years in Business
+      </span>
+      <span class="hero-trust-badge">
+        {% icon "clock", "", 16 %}
+        Same-Day Service Available
+      </span>
     </div>
   </div>
 </div>
@@ -92,7 +117,7 @@ eleventyComputed:
   </div>
 </section>
 
-{% set galleryItems = projects | slice(0, 8) %}
+{% set galleryItems = projects | limit(8) %}
 {% set galleryHeading = "See Our Work" %}
 {% include "partials/project-gallery.njk" %}
 

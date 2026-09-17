@@ -186,7 +186,7 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
 </section>
 
 {# ── RECENT PROJECTS ─────────────────────────────────────────────────────── #}
-{% set galleryItems = projects | slice(0, 6) %}
+{% set galleryItems = projects | limit(6) %}
 {% set galleryVariant = "grid" %}
 {% set galleryHeading = "Recent Projects" %}
 {% set galleryIntro = "A look at recent furnace, AC, heat pump, and ductless installations across the GTA, Hamilton, and Niagara." %}
