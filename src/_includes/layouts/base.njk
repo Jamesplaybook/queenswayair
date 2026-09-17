@@ -88,6 +88,15 @@
   {% include "partials/footer.njk" %}
   {% include "partials/sticky-call-bar.njk" %}
 
+  {# ── Project photo lightbox (single instance, populated by main.js) ── #}
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Project photo">
+    <button type="button" class="lightbox__close" id="lightbox-close" aria-label="Close">&#x2715;</button>
+    <figure class="lightbox__figure">
+      <img class="lightbox__img" id="lightbox-img" src="" alt="">
+      <figcaption class="lightbox__caption" id="lightbox-caption"></figcaption>
+    </figure>
+  </div>
+
   {# ── Meta Pixel (only if ID provided) ────────────────────── #}
   {% if site.metaPixelId %}
   <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','{{ site.metaPixelId }}');fbq('track','PageView');</script>

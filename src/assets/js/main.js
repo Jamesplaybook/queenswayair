@@ -52,6 +52,55 @@
     });
   });
 
+  // ── Project gallery lightbox ─────────────────────────────────────────────
+  var lightbox        = document.getElementById("lightbox");
+  var lightboxImg      = document.getElementById("lightbox-img");
+  var lightboxCaption  = document.getElementById("lightbox-caption");
+  var lightboxClose    = document.getElementById("lightbox-close");
+  var lightboxTriggers = document.querySelectorAll(".js-lightbox-trigger");
+
+  if (lightbox && lightboxImg && lightboxClose && lightboxTriggers.length) {
+    var lightboxLastFocused = null;
+
+    function openLightbox(trigger) {
+      lightboxLastFocused = trigger;
+      lightboxImg.src = trigger.getAttribute("data-lightbox-src") || "";
+      lightboxImg.alt = trigger.getAttribute("data-lightbox-alt") || "";
+      lightboxCaption.textContent = trigger.getAttribute("data-lightbox-caption") || "";
+      lightbox.classList.add("is-open");
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.classList.add("lightbox-open");
+      lightboxClose.focus();
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove("is-open");
+      lightbox.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("lightbox-open");
+      lightboxImg.src = "";
+      if (lightboxLastFocused) lightboxLastFocused.focus();
+    }
+
+    lightboxTriggers.forEach(function (trigger) {
+      trigger.addEventListener("click", function () {
+        openLightbox(trigger);
+      });
+    });
+
+    lightboxClose.addEventListener("click", closeLightbox);
+
+    // Click on the dark backdrop (not the image/caption/close button) closes it
+    lightbox.addEventListener("click", function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && lightbox.classList.contains("is-open")) {
+        closeLightbox();
+      }
+    });
+  }
+
   // ── Scroll-reveal (fade-in on scroll) ──────────────────────────────────────
   if ("IntersectionObserver" in window) {
     var io = new IntersectionObserver(

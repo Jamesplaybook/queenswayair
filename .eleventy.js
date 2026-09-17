@@ -37,6 +37,25 @@ module.exports = function (eleventyConfig) {
     return Image.generateHTML(metadata, imageAttributes);
   });
 
+  // Single-URL image shortcode — returns just the generated file's URL (no markup).
+  // Used where a template needs an optimized image URL outside an <img>/<picture>,
+  // e.g. as a data attribute for a JS-driven lightbox.
+  eleventyConfig.addAsyncShortcode("imageUrl", async function (src, width, format) {
+    const srcPath = src.startsWith("/") ? `src${src}` : src;
+    const fmt = format || "jpeg";
+    const metadata = await Image(srcPath, {
+      widths: [width || 1600],
+      formats: [fmt],
+      outputDir: "_site/assets/img/",
+      urlPath: "/assets/img/",
+      filenameFormat: (_id, srcPath, width, format) => {
+        const name = path.basename(srcPath, path.extname(srcPath));
+        return `${name}-${width}.${format}`;
+      },
+    });
+    return metadata[fmt][0].url;
+  });
+
   // Hero image shortcode (eager, high priority)
   eleventyConfig.addAsyncShortcode("heroImage", async function (src, alt, sizes) {
     const srcPath = src.startsWith("/") ? `src${src}` : src;

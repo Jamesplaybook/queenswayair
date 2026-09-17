@@ -1226,6 +1226,63 @@ details[open] .faq-chevron { transform: rotate(180deg); }
 }
 @media (min-width: 768px) { .project-strip .project-tile { width: 210px; } }
 
+/* ============================================================
+   PROJECT PHOTO LIGHTBOX
+   ============================================================ */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+  background: rgba(15,15,20,0.92);
+}
+.lightbox.is-open { display: flex; }
+body.lightbox-open { overflow: hidden; }
+
+.lightbox__figure {
+  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+.lightbox__img {
+  max-width: 100%;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+}
+.lightbox__caption {
+  color: var(--color-white);
+  font-size: var(--text-sm);
+  text-align: center;
+}
+.lightbox__close {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  color: var(--color-white);
+  font-size: var(--text-lg);
+  transition: background var(--transition-fast);
+}
+.lightbox__close:hover,
+.lightbox__close:focus-visible { background: rgba(255,255,255,0.25); }
+.lightbox__close:focus-visible { outline: 3px solid var(--color-white); outline-offset: 2px; }
+
 .post-content {
   max-width: 72ch;
   margin-inline: auto;
