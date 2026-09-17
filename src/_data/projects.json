@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "furnace-install-mississauga",
+    "title": "Furnace Installation",
+    "area": "Mississauga",
+    "areaSlug": "mississauga",
+    "serviceSlug": "furnace-installation",
+    "date": "2026-08-01",
+    "image": "/assets/img/projects/project-01.jpg",
+    "alt": "New high-efficiency furnace installed in a Mississauga home"
+  },
+  {
+    "slug": "ac-install-oakville",
+    "title": "Air Conditioner Installation",
+    "area": "Oakville",
+    "areaSlug": "oakville",
+    "serviceSlug": "ac-installation",
+    "date": "2026-07-18",
+    "image": "/assets/img/projects/project-02.jpg",
+    "alt": "New central air conditioner installed beside an Oakville home"
+  },
+  {
+    "slug": "heat-pump-brampton",
+    "title": "Heat Pump Installation",
+    "area": "Brampton",
+    "areaSlug": "brampton",
+    "serviceSlug": "heat-pump-installation",
+    "date": "2026-07-02",
+    "image": "/assets/img/projects/project-03.jpg",
+    "alt": "Air-source heat pump installed outside a Brampton home"
+  },
+  {
+    "slug": "ductless-ac-etobicoke",
+    "title": "Ductless AC Installation",
+    "area": "Etobicoke",
+    "areaSlug": "etobicoke",
+    "serviceSlug": "ductless-ac",
+    "date": "2026-06-20",
+    "image": "/assets/img/projects/project-04.jpg",
+    "alt": "Ductless mini-split indoor unit installed in an Etobicoke home"
+  },
+  {
+    "slug": "water-heater-milton",
+    "title": "Water Heater Replacement",
+    "area": "Milton",
+    "areaSlug": "milton",
+    "serviceSlug": "water-heater",
+    "date": "2026-06-05",
+    "image": "/assets/img/projects/project-05.jpg",
+    "alt": "New tankless water heater installed in a Milton home"
+  },
+  {
+    "slug": "furnace-repair-burlington",
+    "title": "Furnace Repair",
+    "area": "Burlington",
+    "areaSlug": "burlington",
+    "serviceSlug": "furnace-repair",
+    "date": "2026-05-22",
+    "image": "/assets/img/projects/project-06.jpg",
+    "alt": "Technician repairing a furnace in a Burlington home"
+  },
+  {
+    "slug": "humidifier-toronto",
+    "title": "Whole-Home Humidifier Installation",
+    "area": "Toronto",
+    "areaSlug": "toronto",
+    "serviceSlug": "humidifiers",
+    "date": "2026-05-10",
+    "image": "/assets/img/projects/project-07.jpg",
+    "alt": "Whole-home humidifier installed on a furnace in a Toronto home"
+  },
+  {
+    "slug": "fireplace-hamilton",
+    "title": "Gas Fireplace Installation",
+    "area": "Hamilton",
+    "areaSlug": "hamilton",
+    "serviceSlug": "fireplaces",
+    "date": "2026-04-28",
+    "image": "/assets/img/projects/project-08.jpg",
+    "alt": "New gas fireplace installed in a Hamilton home"
+  }
+]

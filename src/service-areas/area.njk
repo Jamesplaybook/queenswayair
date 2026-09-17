@@ -4,6 +4,7 @@ pagination:
   data: areas
   size: 1
   alias: area
+  addAllPagesToCollections: true
 permalink: "/service-areas/{{ area.slug }}/"
 eleventyComputed:
   title: "{{ area.metaTitle }}"
@@ -60,16 +61,6 @@ eleventyComputed:
 
         <h2>Why {{ area.name }} Homeowners Choose Queensway</h2>
         <p>When your furnace fails in a {{ area.name }} winter or your AC breaks down in July, you need a team you can trust. Queensway Heating and Cooling brings the same professionalism, honesty, and technical expertise to every home in {{ area.name }}. We're licensed, insured, and stand behind every job with our satisfaction guarantee.</p>
-
-        <div class="map-embed" style="margin-top:2rem;">
-          <iframe
-            src="https://www.google.com/maps/embed/v1/place?key=YOUR_MAPS_API_KEY&q={{ area.name }},Ontario,Canada"
-            title="Map of {{ area.name }}, Ontario"
-            allowfullscreen
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
       </div>
 
       <aside class="sidebar" aria-label="Contact and other service areas">

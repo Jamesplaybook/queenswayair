@@ -274,6 +274,22 @@ const jobs = [
       "No visible text, no brand logos, no model numbers, no readable signage on any " +
       "equipment, uniform, or surface.",
   },
+  {
+    slot: "svc-humidifiers",
+    out: "src/assets/img/services/humidifiers.jpg",
+    size: "1536x1024",
+    prompt:
+      "Technician installing a compact bypass humidifier onto the side of a residential " +
+      "furnace plenum in a clean, well-lit GTA basement mechanical room; copper water line " +
+      "and duct collar visible, tech's hands making a careful connection, tidy surroundings " +
+      "implying whole-home comfort and healthy indoor humidity. " +
+      "Editorial commercial photography for a premium-but-approachable Canadian HVAC company. " +
+      "Real Greater Toronto Area residential context, natural daylight, warm-neutral colour " +
+      "grading, 35–50mm lens feel, shallow but legible depth of field. Composition leaves " +
+      "clean negative space (typically the upper third or one side) for headline text overlay. " +
+      "No visible text, no brand logos, no model numbers, no readable signage on any " +
+      "equipment, uniform, or surface.",
+  },
 
   // ── Top-level page heroes ─────────────────────────────────────────────────
   {
@@ -364,22 +380,6 @@ const jobs = [
       "together showing a generic HVAC system diagram (no readable text); both relaxed and " +
       "engaged, soft natural window light, modern kitchen — consultative, trusted, " +
       "transparent quote process. " +
-      "Editorial commercial photography for a premium-but-approachable Canadian HVAC company. " +
-      "Real Greater Toronto Area residential context, natural daylight, warm-neutral colour " +
-      "grading, 35–50mm lens feel, shallow but legible depth of field. Composition leaves " +
-      "clean negative space (typically the upper third or one side) for headline text overlay. " +
-      "No visible text, no brand logos, no model numbers, no readable signage on any " +
-      "equipment, uniform, or surface.",
-  },
-  {
-    slot: "page-financing",
-    out: "src/assets/img/hero/financing.jpg",
-    size: "1536x1024",
-    prompt:
-      "Quiet editorial still life on a kitchen or home-office table: a tablet showing a " +
-      "generic ascending line graph (screen not readable), a steaming coffee mug beside it, " +
-      "a Canadian homeowner's hand resting calmly nearby — conveys confident financial " +
-      "planning, rebates, and savings without stress. " +
       "Editorial commercial photography for a premium-but-approachable Canadian HVAC company. " +
       "Real Greater Toronto Area residential context, natural daylight, warm-neutral colour " +
       "grading, 35–50mm lens feel, shallow but legible depth of field. Composition leaves " +

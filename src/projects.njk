@@ -1,0 +1,38 @@
+---
+layout: layouts/base.njk
+title: "Our Work | Recent HVAC Projects"
+description: "See recent furnace, AC, heat pump, and ductless installations completed by Queensway Heating and Cooling across Mississauga, the GTA, Hamilton, and Niagara."
+---
+
+<div class="page-hero">
+  <div class="container">
+    <h1>Our Work</h1>
+    <p>A look at recent furnace, AC, heat pump, and ductless installations across Mississauga, the GTA, Hamilton, and Niagara.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="blog-grid">
+      {% for project in projects %}
+      <article class="blog-card fade-in">
+        <div class="blog-card__img">
+          {% image project.image, project.alt, "(min-width: 992px) 33vw, (min-width: 576px) 50vw, 100vw", [400,640,800], "" %}
+        </div>
+        <div class="blog-card__body">
+          <p class="blog-card__meta">
+            {% if project.areaSlug %}<a href="/service-areas/{{ project.areaSlug }}/">{{ project.area }}</a>{% else %}{{ project.area }}{% endif %}
+          </p>
+          <h2 class="blog-card__title">
+            {% if project.serviceSlug %}<a href="/services/{{ project.serviceSlug }}/">{{ project.title }}</a>{% else %}{{ project.title }}{% endif %}
+          </h2>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% set ctaTitle = "Like What You See?" %}
+{% set ctaText = "Call for a free quote on your next furnace, AC, or heat pump project." %}
+{% include "partials/cta-band.njk" %}

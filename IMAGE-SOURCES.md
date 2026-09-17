@@ -41,6 +41,13 @@ Used in:      src/blog/index.njk — fallback when a post has no image: frontmat
 Dimensions:   1200×675 (16:9)
 Replace with: Generic HVAC/home comfort image, or a branded blog header graphic
 
+## services/humidifiers.jpg
+Source:       AI-generated via scripts/generate-images.js (svc-humidifiers slot)
+License:      OpenAI generated content — usable per OpenAI's terms; replace with real photography before launch
+Used in:      src/services/service.njk hero (humidifiers service page)
+Dimensions:   1536×1024 (3:2)
+Replace with: Real photo of a bypass/fan-powered humidifier installed on a furnace plenum
+
 ## og/og-home.jpg
 Source:       https://picsum.photos/seed/queensway-og/1200/630
 License:      Picsum / Unsplash License
@@ -71,11 +78,6 @@ Replace with: Monochrome version of real logo
 Source:       Generated placeholder SVG
 Used in:      src/index.njk, src/reviews.njk review-platform strip
 Replace with: Official Google Reviews badge from https://marketingkit.withgoogle.com/
-
-## brand-marks/homestars.svg
-Source:       Generated placeholder SVG
-Used in:      src/index.njk, src/reviews.njk review-platform strip
-Replace with: Official HomeStars badge from https://homestars.com/companies (your business profile → badges)
 
 ## favicon/icon.svg, favicon.ico, apple-touch-icon.png
 Source:       Generated placeholders

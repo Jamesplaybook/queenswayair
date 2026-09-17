@@ -111,5 +111,35 @@
     ],
     "geo": { "lat": 43.6532, "lng": -79.3832 },
     "wikidataSameAs": "https://www.wikidata.org/wiki/Q172"
+  },
+  {
+    "slug": "hamilton",
+    "name": "Hamilton",
+    "metaTitle": "HVAC Repair & Installation in Hamilton | Queensway Heating and Cooling",
+    "metaDescription": "Furnace, AC, heat pump, and humidifier service across Hamilton, Ancaster, Dundas, and Stoney Creek. Open 24 hours, 7 days a week.",
+    "heroHeading": "Heating and Cooling Services in Hamilton",
+    "heroSub": "Licensed furnace, air conditioning, and heat pump service throughout Hamilton and the surrounding communities.",
+    "intro": "Hamilton homes range from century brick houses on the escarpment to new builds in Waterdown, and each one heats and cools differently. Our technicians work across the whole city — installing high-efficiency furnaces and heat pumps, repairing air conditioners on short notice, and keeping older systems running safely through the winter.",
+    "neighborhoods": [
+      "Downtown Hamilton", "Ancaster", "Dundas", "Stoney Creek",
+      "Waterdown", "Westdale", "Mountain", "Binbrook"
+    ],
+    "geo": { "lat": 43.2557, "lng": -79.8711 },
+    "wikidataSameAs": "https://www.wikidata.org/wiki/Q188534"
+  },
+  {
+    "slug": "niagara",
+    "name": "Niagara",
+    "metaTitle": "HVAC Repair & Installation in Niagara | Queensway Heating and Cooling",
+    "metaDescription": "Furnace, AC, heat pump, and water heater service across Niagara Falls, St. Catharines, Welland, Grimsby, and Fort Erie. Open 24 hours, 7 days a week.",
+    "heroHeading": "Heating and Cooling Services in Niagara",
+    "heroSub": "Serving homeowners across Niagara Falls, St. Catharines, Welland, Grimsby, Niagara-on-the-Lake, and Fort Erie.",
+    "intro": "The Niagara region sees humid summers off the lake and cold, damp winters — hard conditions for heating and cooling equipment. We install and service furnaces, air conditioners, heat pumps, water heaters, and humidifiers throughout the region, with emergency availability when a system fails.",
+    "neighborhoods": [
+      "Niagara Falls", "St. Catharines", "Welland", "Niagara-on-the-Lake",
+      "Grimsby", "Fort Erie", "Thorold", "Pelham"
+    ],
+    "geo": { "lat": 43.1594, "lng": -79.2469 },
+    "wikidataSameAs": "https://www.wikidata.org/wiki/Q3117162"
   }
 ]

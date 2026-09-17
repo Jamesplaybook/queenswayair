@@ -85,14 +85,11 @@ description: "Contact Queensway Heating and Cooling for furnace repair, AC servi
         </div>
 
         <div class="sidebar-card">
-          <h3>Office Address</h3>
+          <h3>Service Area</h3>
           <address style="font-style:normal;font-size:0.875rem;line-height:1.8;">
-            {{ site.address.street }}<br>
-            {{ site.address.city }}, {{ site.address.province }} {{ site.address.postal }}
+            {{ site.address.city }}, {{ site.address.province }}<br>
+            Mobile service across Mississauga, Oakville, Brampton, Etobicoke, Milton, Burlington, Toronto, Hamilton, Niagara, and surrounding communities.
           </address>
-          <a href="{{ site.address.mapUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-top:1rem;display:inline-flex;">
-            Get Directions →
-          </a>
         </div>
 
         <div class="sidebar-card">
@@ -100,16 +97,6 @@ description: "Contact Queensway Heating and Cooling for furnace repair, AC servi
           <a href="mailto:{{ site.email }}" style="color:var(--color-primary);word-break:break-all;">{{ site.email }}</a>
         </div>
       </aside>
-    </div>
-
-    <div class="map-embed" style="margin-top:3rem;">
-      <iframe
-        src="https://www.google.com/maps/embed/v1/place?key=YOUR_MAPS_API_KEY&q={{ site.address.street | urlencode }},{{ site.address.city }},{{ site.address.province }}"
-        title="Queensway Heating and Cooling office location"
-        allowfullscreen
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
     </div>
   </div>
 </section>

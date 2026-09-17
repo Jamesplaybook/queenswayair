@@ -22,10 +22,10 @@
       "image": "{{ site.url }}{{ site.ogImage }}",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "{{ site.address.street }}",
+        {% if site.address.street %}"streetAddress": "{{ site.address.street }}",{% endif %}
         "addressLocality": "{{ site.address.city }}",
         "addressRegion": "{{ site.address.province }}",
-        "postalCode": "{{ site.address.postal }}",
+        {% if site.address.postal %}"postalCode": "{{ site.address.postal }}",{% endif %}
         "addressCountry": "{{ site.address.country }}"
       },
       "geo": {
@@ -63,7 +63,7 @@
         "Gas fireplace installation", "Fireplace repair",
         "HRV installation", "ERV installation", "Heat recovery ventilator",
         "HVAC maintenance plans", "Emergency HVAC service",
-        "Indoor air quality", "Greener Homes rebates"
+        "Indoor air quality", "Whole-home humidifiers"
       ],
       "hasCredential": [
         {
@@ -76,8 +76,7 @@
       "sameAs": [
         "{{ site.social.facebook }}",
         "{{ site.social.instagram }}",
-        "{{ site.gbpUrl }}",
-        "{{ site.homestarsUrl }}"
+        "{{ site.gbpUrl }}"
       ],
       "aggregateRating": {
         "@type": "AggregateRating",

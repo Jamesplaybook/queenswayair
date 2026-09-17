@@ -24,6 +24,7 @@ module.exports = [
     label: "Other Services",
     url: "/services/",
     children: [
+      { label: "Humidifiers",       url: "/services/humidifiers/" },
       { label: "Water Heaters",     url: "/services/water-heater/" },
       { label: "Fireplaces",        url: "/services/fireplaces/" },
       { label: "HRV & ERV",         url: "/services/hrv-erv/" },
@@ -31,6 +32,7 @@ module.exports = [
     ],
   },
   { label: "Service Areas", url: "/service-areas/" },
+  { label: "Our Work",      url: "/projects/" },
   { label: "About",         url: "/about/" },
   { label: "Blog",          url: "/blog/" },
   { label: "Get a Quote",   url: "/quote/", cta: true },

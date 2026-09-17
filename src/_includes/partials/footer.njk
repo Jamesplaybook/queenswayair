@@ -38,6 +38,7 @@
         <nav class="footer-nav" aria-label="Footer quick links">
           <a href="/">Home</a>
           <a href="/about/">About Us</a>
+          <a href="/projects/">Our Work</a>
           <a href="/reviews/">Customer Reviews</a>
           <a href="/service-areas/">Service Areas</a>
           <a href="/blog/">Blog</a>
@@ -62,9 +63,10 @@
         <div class="footer-location">
           <address style="font-style:normal">
             <a href="{{ site.address.mapUrl }}" target="_blank" rel="noopener noreferrer">
-              {{ site.address.street }}<br>
-              {{ site.address.city }}, {{ site.address.province }} {{ site.address.postal }}
+              {% if site.address.street %}{{ site.address.street }}<br>{% endif %}
+              {{ site.address.city }}, {{ site.address.province }}{% if site.address.postal %} {{ site.address.postal }}{% endif %}
             </a>
+            <br><span style="color:rgba(255,255,255,0.65); font-size:0.8rem;">Mobile service across Mississauga, the GTA, Hamilton, and Niagara</span>
           </address>
           <a href="tel:{{ site.phonePlain }}" class="footer-location__phone">{{ site.phone }}</a>
           <a href="mailto:{{ site.email }}">{{ site.email }}</a>
@@ -85,7 +87,7 @@
     </div>
 
     <div class="site-footer__bottom">
-      <span>Licensed &amp; insured HVAC contractor serving Mississauga and the GTA</span>
+      <span>Licensed &amp; insured HVAC contractor serving Mississauga, the GTA, Hamilton, and Niagara</span>
       <span>
         <a href="/privacy/">Privacy Policy</a> &middot;
         <a href="/sitemap.xml">Sitemap</a>

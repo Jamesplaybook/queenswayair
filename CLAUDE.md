@@ -66,7 +66,7 @@ vercel dev           # run dev server + Vercel Functions locally (requires Verce
 
 **AI image generation (optional):**
 - Set your key once per shell: `$env:OPENAI_API_KEY="sk-..."` (PowerShell).
-- Run `npm run generate:images` to fill missing slots, `-- --force` to regenerate all, or `-- <slot>` for one (slots: `hero`, `trust`, `quote-band`, `faq`, `blog-default`).
+- Run `npm run generate:images` to fill missing slots, `-- --force` to regenerate all, or `-- <slot>` for one (slots: `hero`, `trust`, `quote-band`, `faq`, `blog-default`, plus one `svc-<service-slug>` and `page-<page-name>` slot per service/page hero — see `scripts/generate-images.js` for the full list).
 - Default model is `gpt-image-2` (highest quality, may require OpenAI org verification). Fall back with `$env:OPENAI_IMAGE_MODEL="gpt-image-1"` or `="dall-e-3"`.
 - After generation run `npm run build` — eleventy-img regenerates AVIF/WebP/JPEG variants from the new source files.
 

@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: "Customer Reviews | Queensway Heating and Cooling"
-description: "Read real customer reviews for Queensway Heating and Cooling. Over 450 five-star reviews from homeowners across Mississauga, Oakville, Brampton, and the GTA."
+description: "Read reviews from Queensway Heating and Cooling customers across the GTA, Hamilton, and Niagara — 5/5 from 5 reviews."
 ---
 
 <section class="page-hero page-hero--photo" aria-label="Customer Reviews">
@@ -12,41 +12,24 @@ description: "Read real customer reviews for Queensway Heating and Cooling. Over
   <div class="page-hero__content">
     <div class="container">
       <h1>What Our Customers Say</h1>
-      <p>{{ site.reviewCount }} reviews. {{ site.reviewRating }} stars. Here's what your neighbours think of Queensway Heating and Cooling.</p>
+      <p>Rated {{ site.reviewRating }}/5 from {{ site.reviewCount }} reviews on Google. Here's what your neighbours think of Queensway Heating and Cooling.</p>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <div class="container">
-    <div class="testimonials__grid" style="grid-template-columns:repeat(auto-fill,minmax(300px,1fr))">
-      {% for review in reviews %}
-      <article class="testimonial-card fade-in">
-        <blockquote class="testimonial-card__quote">"{{ review.text }}"</blockquote>
-        <footer class="testimonial-card__footer">
-          <div class="testimonial-card__stars" aria-label="{{ review.rating }} stars" role="img">
-            {% for i in range(0, review.rating) %}{% include "partials/star.njk" %}{% endfor %}
-          </div>
-          <span class="testimonial-card__name">{{ review.name }}</span>
-          <span class="testimonial-card__city">
-            {% if review.citySlug %}<a href="/service-areas/{{ review.citySlug }}/">{{ review.city }}</a>{% else %}{{ review.city }}{% endif %}
-          </span>
-        </footer>
-      </article>
-      {% endfor %}
+  <div class="container" style="max-width:640px;text-align:center;">
+    <div class="stars-img" aria-label="{{ site.reviewRating }} stars" role="img" style="justify-content:center;display:flex;margin-bottom:1rem;">
+      {% set starSize = 24 %}{% for i in range(0, 5) %}{% include "partials/star.njk" %}{% endfor %}
     </div>
+    <p class="lead">Our reviews live on our Google Business Profile — real feedback from real GTA, Hamilton, and Niagara homeowners.</p>
 
-    <div class="review-platforms" style="margin-top:3rem;border:none;padding-top:0;">
-      <div class="review-platforms__grid">
+    <div class="review-platforms" style="margin-top:2.5rem;border:none;padding-top:0;">
+      <div class="review-platforms__grid" style="grid-template-columns:1fr;max-width:340px;margin:0 auto;">
         <div class="review-platform">
           <img src="/assets/img/brand-marks/google-reviews.svg" alt="Google Reviews" width="140" height="52" loading="lazy">
-          <p>Read all our Google reviews</p>
+          <p>{{ site.reviewCount }} Google Reviews</p>
           <a href="{{ site.gbpUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View on Google →</a>
-        </div>
-        <div class="review-platform">
-          <img src="/assets/img/brand-marks/homestars.svg" alt="HomeStars" width="140" height="52" loading="lazy">
-          <p>Read our HomeStars reviews</p>
-          <a href="{{ site.homestarsUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View on HomeStars →</a>
         </div>
       </div>
     </div>

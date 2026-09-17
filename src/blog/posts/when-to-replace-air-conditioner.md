@@ -3,7 +3,7 @@ layout: layouts/post.njk
 title: "When Should You Replace Your Air Conditioner? 8 Signs It's Time"
 description: "Is your air conditioner struggling? Here are 8 signs it's time to replace your central AC — and how to choose the right new unit for your Mississauga home."
 date: 2026-03-20
-excerpt: "An aging air conditioner costs you money every summer. Learn the 8 signs it's time to replace your AC — and how to maximize rebates on a new high-efficiency unit."
+excerpt: "An aging air conditioner costs you money every summer. Learn the 8 signs it's time to replace your AC — and how to choose the right new unit."
 tags: ["post", "air conditioner", "replacement"]
 ---
 
@@ -56,7 +56,7 @@ If any of the above signs apply, here's what to prioritize when shopping for a r
 - **Variable-speed compressor**: More efficient, quieter, and better at humidity control than single-stage compressors.
 - **Manufacturer warranty**: Look for 10-year parts + 5-year labour as a baseline.
 
-And don't forget to check available rebates. The Enbridge HER+ program offers cash back on qualifying high-efficiency AC units — ask us what's currently available.
+- **Sound rating**: Newer units run significantly quieter than models from even a decade ago — worth factoring in if your condenser sits near a bedroom window or patio.
 
 ---
 

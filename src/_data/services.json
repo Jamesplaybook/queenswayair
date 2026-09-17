@@ -4,7 +4,7 @@
     "title": "Furnace Installation",
     "navLabel": "Furnace Installation",
     "metaTitle": "Furnace Installation GTA | Queensway Heating & Air Conditioning",
-    "metaDescription": "New high-efficiency furnace installation across the GTA. Same-day quotes. Licensed HVAC technicians. Financing and Greener Homes rebates available.",
+    "metaDescription": "New high-efficiency furnace installation across the GTA, Hamilton, and Niagara. Same-day quotes. Licensed HVAC technicians.",
     "blurb": "New high-efficiency gas furnace installed right the first time — with a warranty you can count on.",
     "icon": "flame",
     "heroHeading": "Expert Furnace Installation in the GTA",
@@ -14,7 +14,7 @@
       "Free in-home assessment and transparent quote",
       "Same-day and next-day installation available",
       "Up to 10-year manufacturer warranty",
-      "Eligible for Enbridge and Greener Homes rebates",
+      "Free removal and disposal of your old furnace",
       "Clean, licensed, and insured technicians"
     ],
     "faqs": [
@@ -27,8 +27,8 @@
         "a": "We install and service Lennox, Carrier, Trane, Goodman, and other leading brands. We'll help you choose the best fit for your budget and home size."
       },
       {
-        "q": "Are there rebates available for a new furnace in Ontario?",
-        "a": "Yes — the Canada Greener Homes Grant and Enbridge Home Efficiency Rebate both offer rebates for qualifying high-efficiency furnaces. We help you with the paperwork."
+        "q": "Do you help me choose the right furnace size?",
+        "a": "Yes — we perform a proper load calculation based on your home's size, insulation, and layout rather than guessing. The right size furnace runs more efficiently and lasts longer than one that's oversized or undersized."
       }
     ]
   },
@@ -66,7 +66,7 @@
     "title": "Air Conditioner Installation",
     "navLabel": "AC Installation",
     "metaTitle": "Air Conditioner Installation GTA | Queensway Heating & Air",
-    "metaDescription": "New central air conditioner installation across the GTA. High-efficiency units. Financing available. Call Queensway for a free quote.",
+    "metaDescription": "New central air conditioner installation across the GTA, Hamilton, and Niagara. High-efficiency units. Call Queensway for a free quote.",
     "blurb": "Cool your home efficiently with a new central air conditioner — installed and guaranteed.",
     "icon": "snowflake",
     "heroHeading": "Air Conditioner Installation in the GTA",
@@ -75,7 +75,7 @@
     "benefits": [
       "Free in-home assessment and load calculation",
       "High-SEER units from leading brands",
-      "Eligible for Enbridge home efficiency rebates",
+      "Quiet operation with sound-dampened outdoor units",
       "Includes refrigerant, electrical, and disconnect",
       "10-year warranty on qualifying installs"
     ],
@@ -124,15 +124,15 @@
     "title": "Heat Pump Installation",
     "navLabel": "Heat Pumps",
     "metaTitle": "Heat Pump Installation GTA | Queensway Heating & Air Conditioning",
-    "metaDescription": "Air-source heat pump installation across the GTA. Up to $10,600 in Greener Homes rebates available. Lennox, Mitsubishi, Bosch certified. Call today.",
-    "blurb": "Heating and cooling in one efficient system — and up to $10,600 in government rebates available.",
+    "metaDescription": "Air-source heat pump installation across the GTA, Hamilton, and Niagara. High-efficiency heating and cooling in one system. Lennox, Mitsubishi, Bosch certified. Call today.",
+    "blurb": "Heating and cooling in one efficient system — using a fraction of the energy of electric heat.",
     "icon": "thermometer-sun",
     "heroHeading": "Heat Pump Installation in the GTA",
-    "heroSub": "Qualify for up to $10,600 in Ontario and federal rebates on an air-source heat pump. We handle all the paperwork.",
-    "body": "Air-source heat pumps are the most efficient way to heat and cool your home — they can deliver 2–3x the energy value of electric baseboard heating. Combined with Ontario's Greener Homes Grant and Enbridge HER+ rebates, the economics have never been better.",
+    "heroSub": "One system that heats in winter and cools in summer, using a fraction of the energy of electric heat.",
+    "body": "Air-source heat pumps are the most efficient way to heat and cool your home — they can deliver 2–3x the energy value of electric baseboard heating, in one system that replaces both your furnace and central air conditioner.",
     "benefits": [
       "Heat and cool with one system",
-      "Up to $10,600 in combined rebates available",
+      "Lower operating costs than electric baseboard or oil heat",
       "Cold-climate rated units for Ontario winters",
       "Reduces carbon footprint vs. gas furnace",
       "Lennox, Mitsubishi, Bosch, and Carrier certified"
@@ -143,8 +143,8 @@
         "a": "Modern cold-climate heat pumps (like the Lennox XC21 or Mitsubishi Hyper Heat) work down to -30°C. Most Ontario homeowners pair them with a gas furnace backup for the coldest days."
       },
       {
-        "q": "What rebates are available for heat pumps in Ontario?",
-        "a": "The Canada Greener Homes Grant offers up to $5,000, and the Enbridge HER+ program adds up to $5,600 for qualifying homeowners — combined up to $10,600. We help you apply."
+        "q": "Can a heat pump replace my furnace entirely?",
+        "a": "Yes — modern cold-climate heat pumps can serve as your primary heat source. Many homeowners pair one with their existing furnace as a backup for the coldest days, but a properly sized cold-climate unit can often stand alone."
       }
     ]
   },
@@ -261,6 +261,43 @@
       {
         "q": "Do I need an HRV in my home?",
         "a": "Ontario Building Code requires HRVs in all new homes built since 2017. If your home is well-sealed and you notice stale air, condensation on windows, or high humidity, adding an HRV can significantly improve your indoor air quality and comfort."
+      }
+    ]
+  },
+  {
+    "slug": "humidifiers",
+    "title": "Humidifiers",
+    "navLabel": "Humidifiers",
+    "metaTitle": "Whole-Home Humidifier Installation & Repair GTA | Queensway Heating & Air",
+    "metaDescription": "Whole-home humidifier installation, repair, and maintenance across the GTA, Hamilton, and Niagara. End dry winter air, static, and cracked woodwork. Call Queensway for a free quote.",
+    "blurb": "End dry winter air with a whole-home humidifier installed right into your furnace system.",
+    "icon": "droplets",
+    "heroHeading": "Whole-Home Humidifier Installation in the GTA",
+    "heroSub": "Dry air, static shocks, cracked hardwood? A furnace-mounted humidifier keeps your home at healthy humidity all winter.",
+    "body": "Ontario winters strip moisture out of your home, leaving dry skin, sore throats, static, and gaps in hardwood floors and trim. A whole-home humidifier installs directly onto your furnace and ductwork, adding balanced moisture to every room automatically — far more effective than portable units you have to refill. Queensway installs and services bypass, fan-powered, and steam humidifiers from Honeywell, Aprilaire, and Generalaire.",
+    "benefits": [
+      "Free assessment and humidifier sizing for your home",
+      "Bypass, fan-powered, and steam models available",
+      "Installed on your existing furnace and ductwork",
+      "Automatic humidistat control — set it and forget it",
+      "Annual filter/pad replacement and servicing available"
+    ],
+    "faqs": [
+      {
+        "q": "What humidity level should I keep my home at in winter?",
+        "a": "Between 35% and 45% is the sweet spot for comfort and for protecting hardwood and millwork. Much higher and you risk condensation on windows; much lower and dry-air problems return."
+      },
+      {
+        "q": "Is a whole-home humidifier better than a portable one?",
+        "a": "Yes. A furnace-mounted humidifier treats every room served by your ductwork, runs automatically off a humidistat, and never needs refilling. Portable units only help one room and need daily attention."
+      },
+      {
+        "q": "How much maintenance does a humidifier need?",
+        "a": "Very little — the water panel or pad should be replaced once a year, ideally at your annual furnace tune-up. We can include it in a maintenance plan."
+      },
+      {
+        "q": "Can you add a humidifier to my existing furnace?",
+        "a": "In almost all cases, yes. As long as you have forced-air ductwork and a nearby water line, we can install a whole-home humidifier in a few hours."
       }
     ]
   },

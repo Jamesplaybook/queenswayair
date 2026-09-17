@@ -5,7 +5,7 @@ module.exports = {
   nameDBA:     "QueenswayAir",
   legalName:   "Queensway Heating & Air Conditioning",
   tagline:     "GTA's Trusted Heating & Cooling Experts",
-  description: "Queensway Heating & Air Conditioning provides expert furnace, AC, heat pump, ductless AC, water heater, fireplace, and HRV installation and repair across the Greater Toronto Area.",
+  description: "Queensway Heating & Air Conditioning provides expert furnace, AC, heat pump, ductless AC, water heater, fireplace, and HRV installation and repair across the Greater Toronto Area, Hamilton, and Niagara.",
   url:         "https://www.queenswayair.ca",
 
   // ── Contact ────────────────────────────────────────────────────────────────
@@ -15,14 +15,14 @@ module.exports = {
   email:       "queenswayair@gmail.com",
   quoteUrl:    "/quote/",
 
-  // ── Address (primary office) ───────────────────────────────────────────────
+  // ── Address (mobile service — no public office address) ────────────────────
   address: {
-    street:   "123 Queensway Blvd",      // ← REPLACE
+    street:   "",
     city:     "Mississauga",
     province: "ON",
-    postal:   "L5B 2X9",                 // ← REPLACE
+    postal:   "",
     country:  "CA",
-    mapUrl:   "https://maps.google.com/?q=Queensway+Heating+and+Cooling+Mississauga", // ← REPLACE
+    mapUrl:   "https://maps.google.com/?q=Queensway+Heating+and+Cooling+Mississauga",
   },
 
   // Geo coordinates for schema.org
@@ -32,16 +32,16 @@ module.exports = {
   },
 
   // ── Business hours ─────────────────────────────────────────────────────────
-  hours: "Monday–Friday: 8am–6pm · Saturday: 9am–4pm · Sunday: Emergency Only",
+  hours: "Open 24 hours — 7 days a week",
   openingHours: [
-    { days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], open: "08:00", close: "18:00" },
-    { days: ["Saturday"], open: "09:00", close: "16:00" },
+    { days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], open: "00:00", close: "23:59" },
   ],
   emergencyService: true,
 
   // ── License / credentials ──────────────────────────────────────────────────
-  tssaLicense:    "TSSA-XXXXXXXXX",      // ← REPLACE
+  tssaLicense:    "",                    // ← set once you have a license number to display
   yearsInBusiness: 15,                   // ← REPLACE
+  founded:        2011,
   priceRange:     "$$",
 
   // ── Social / review links ──────────────────────────────────────────────────
@@ -50,10 +50,9 @@ module.exports = {
     instagram: "https://instagram.com/queenswayair",   // ← REPLACE or remove
     linkedin:  "",
   },
-  gbpUrl:       "https://g.page/r/queenswayair",       // ← REPLACE (Google Business Profile URL)
-  homestarsUrl: "https://www.homestars.com/companies/queenswayair", // ← REPLACE
-  reviewCount:  "450+",                                // ← REPLACE with real count
-  reviewRating: 4.9,                                   // ← REPLACE
+  gbpUrl:       "https://share.google/muPnk7Xrb53dTe8pj", // Google Business Profile reviews link
+  reviewCount:  "5",
+  reviewRating: 5,
 
   // ── Tracking (leave blank until ready — no empty script tags emitted) ──────
   gtmId:       "",   // e.g. "GTM-XXXXXXX"
@@ -61,7 +60,7 @@ module.exports = {
 
   // ── Default SEO meta (overridden per-page via front matter) ───────────────
   defaultTitle:       "Queensway Heating and Cooling | HVAC Repair & Installation in Mississauga",
-  defaultDescription: "Expert furnace, AC, and heat pump services in Mississauga and the GTA. 24/7 emergency service. Call Queensway Heating and Cooling today.",
+  defaultDescription: "Expert furnace, AC, and heat pump services in Mississauga, the GTA, Hamilton, and Niagara. 24/7 emergency service. Call Queensway Heating and Cooling today.",
   ogImage:            "/assets/img/og/og-home.jpg",   // 1200×630
 
   // ── Manufacturer / certification logos (rendered in footer) ───────────────

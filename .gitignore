@@ -6,3 +6,7 @@ Thumbs.db
 *.log
 .vercel
 .claude/settings.local.json
+
+# Raw/working gallery photos - not final site assets
+gallery_images/
+gallery_images_fixed/

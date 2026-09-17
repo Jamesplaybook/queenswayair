@@ -15,7 +15,7 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
       <div class="hero__grid">
         <div class="hero__text">
           <h1>The GTA's Trusted Heating &amp; Cooling Experts</h1>
-          <p class="hero__sub">Your comfort, guaranteed. Count on Queensway Heating and Cooling for furnace repair, AC installation, and heat pump services in Mississauga, Oakville, Brampton, and the GTA.</p>
+          <p class="hero__sub">Your comfort, guaranteed. Count on Queensway Heating and Cooling for furnace repair, AC installation, and heat pump services in Mississauga, Oakville, Brampton, Hamilton, Niagara, and the GTA.</p>
           <div class="hero__ctas">
             <a href="tel:{{ site.phonePlain }}" class="btn btn-accent btn-lg" aria-label="Call {{ site.phone }}">
               {% icon "phone", "btn__icon", 20 %}
@@ -35,7 +35,7 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
 <div class="section-intro">
   <div class="container">
     <h2>Why You'll Love Our Expert Heating &amp; Cooling Services</h2>
-    <p>From emergency furnace repair to heat pump installations with thousands in rebates — Queensway delivers honest, reliable HVAC service every time.</p>
+    <p>From emergency furnace repair to new heat pump installations — Queensway delivers honest, reliable HVAC service every time.</p>
   </div>
 </div>
 
@@ -81,7 +81,7 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
           {% icon "thermometer-sun", "service-card__icon-svg", 40 %}
         </div>
         <div class="service-card__title">Heat Pumps</div>
-        <p class="service-card__blurb">Heating and cooling in one efficient system — up to $10,600 in government rebates available.</p>
+        <p class="service-card__blurb">Heating and cooling in one efficient system — using a fraction of the energy of electric heat.</p>
       </a>
 
       <a href="/services/ductless-ac/" class="service-card fade-in">
@@ -98,6 +98,14 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
         </div>
         <div class="service-card__title">Water Heaters</div>
         <p class="service-card__blurb">Tank and tankless water heaters — installed, repaired, and maintained by licensed gas technicians.</p>
+      </a>
+
+      <a href="/services/humidifiers/" class="service-card fade-in">
+        <div class="service-card__icon" aria-hidden="true">
+          {% icon "droplets", "service-card__icon-svg", 40 %}
+        </div>
+        <div class="service-card__title">Humidifiers</div>
+        <p class="service-card__blurb">End dry winter air with a whole-home humidifier installed right into your furnace system.</p>
       </a>
 
       <a href="/services/fireplaces/" class="service-card fade-in">
@@ -138,7 +146,7 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
         <div class="trust-tiles">
           <div class="trust-tile fade-in">
             <div class="trust-tile__icon" aria-hidden="true">{% icon "users", "trust-tile__icon-svg" %}</div>
-            <span class="trust-tile__text">{{ site.reviewCount }} 5-Star Reviews</span>
+            <span class="trust-tile__text">{{ site.reviewCount }} Five-Star Reviews</span>
           </div>
           <div class="trust-tile fade-in">
             <div class="trust-tile__icon" aria-hidden="true">{% icon "clock", "trust-tile__icon-svg" %}</div>
@@ -149,8 +157,8 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
             <span class="trust-tile__text">Licensed &amp; Insured (TSSA)</span>
           </div>
           <div class="trust-tile fade-in">
-            <div class="trust-tile__icon" aria-hidden="true">{% icon "credit-card", "trust-tile__icon-svg" %}</div>
-            <span class="trust-tile__text">Flexible Financing Available</span>
+            <div class="trust-tile__icon" aria-hidden="true">{% icon "truck", "trust-tile__icon-svg" %}</div>
+            <span class="trust-tile__text">Fully Stocked Service Vehicles</span>
           </div>
           <div class="trust-tile fade-in">
             <div class="trust-tile__icon" aria-hidden="true">{% icon "award", "trust-tile__icon-svg" %}</div>
@@ -174,6 +182,36 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
         {% image "/assets/img/sections/trust-tech-photo.jpg", "Queensway certified HVAC technician", "(min-width: 768px) 50vw, 100vw", [400,640,800,1200], "" %}
       </div>
     </div>
+  </div>
+</section>
+
+{# ── RECENT PROJECTS ─────────────────────────────────────────────────────── #}
+<div class="section-intro">
+  <div class="container">
+    <h2>Recent Projects</h2>
+    <p>A look at recent furnace, AC, heat pump, and ductless installations across the GTA, Hamilton, and Niagara.</p>
+  </div>
+</div>
+<section class="section" style="padding-top:0" aria-label="Recent projects">
+  <div class="container">
+    <div class="blog-grid">
+      {% for project in projects | slice(0, 6) %}
+      <article class="blog-card fade-in">
+        <div class="blog-card__img">
+          {% image project.image, project.alt, "(min-width: 992px) 33vw, (min-width: 576px) 50vw, 100vw", [400,640,800], "" %}
+        </div>
+        <div class="blog-card__body">
+          <p class="blog-card__meta">
+            {% if project.areaSlug %}<a href="/service-areas/{{ project.areaSlug }}/">{{ project.area }}</a>{% else %}{{ project.area }}{% endif %}
+          </p>
+          <h3 class="blog-card__title">
+            {% if project.serviceSlug %}<a href="/services/{{ project.serviceSlug }}/">{{ project.title }}</a>{% else %}{{ project.title }}{% endif %}
+          </h3>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    <p class="text-center" style="margin-top:2rem;"><a href="/projects/" class="btn btn-outline">View All Projects →</a></p>
   </div>
 </section>
 
@@ -207,7 +245,7 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
           </li>
           <li class="quote-band__trust-item">
             {% icon "circle-check", "quote-band__trust-icon", 20 %}
-            We help you claim Ontario and federal rebates
+            Fully stocked trucks — most repairs done in one visit
           </li>
           <li class="quote-band__trust-item">
             {% icon "circle-check", "quote-band__trust-icon", 20 %}
@@ -221,8 +259,7 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
           <div class="stars-img" aria-label="5 stars" role="img">
             {% set starSize = 18 %}{% for i in range(0, 5) %}{% include "partials/star.njk" %}{% endfor %}
           </div>
-          <blockquote>"My furnace stopped working on the coldest day of the year. Queensway had a technician at my door within 2 hours. Incredible service — I won't call anyone else."</blockquote>
-          <cite>Sarah M. — <a href="/service-areas/mississauga/" style="color:rgba(255,255,255,0.7)">Mississauga</a></cite>
+          <blockquote>"Rated {{ site.reviewRating }}/5 by our Google customers — open 24 hours, 7 days a week across Mississauga, the GTA, Hamilton and Niagara."</blockquote>
         </div>
       </div>
 
@@ -230,45 +267,13 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
   </div>
 </section>
 
-{# ── TESTIMONIALS ────────────────────────────────────────────────────────── #}
-<section class="section" aria-label="Customer testimonials">
-  <div class="container">
-    <h2 class="text-center" style="margin-bottom:2rem;">What Our Customers Say</h2>
-    <div class="testimonials__grid">
-      {% for review in reviews | slice(0, 2) %}
-      <article class="testimonial-card fade-in">
-        <blockquote class="testimonial-card__quote">"{{ review.text }}"</blockquote>
-        <footer class="testimonial-card__footer">
-          <div class="testimonial-card__stars" aria-label="{{ review.rating }} stars" role="img">
-            {% for i in range(0, review.rating) %}{% include "partials/star.njk" %}{% endfor %}
-          </div>
-          <span class="testimonial-card__name">{{ review.name }}</span>
-          <span class="testimonial-card__city">
-            {% if review.citySlug %}
-            <a href="/service-areas/{{ review.citySlug }}/">{{ review.city }}</a>
-            {% else %}
-            {{ review.city }}
-            {% endif %}
-          </span>
-        </footer>
-      </article>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
 {# ── REVIEW PLATFORMS STRIP ──────────────────────────────────────────────── #}
 <div class="review-platforms">
   <div class="container">
-    <div class="review-platforms__grid">
-      <div class="review-platform">
-        <img src="/assets/img/brand-marks/homestars.svg" alt="HomeStars" width="140" height="52" loading="lazy">
-        <p>Read our customer reviews on HomeStars</p>
-        <a href="{{ site.homestarsUrl }}" target="_blank" rel="noopener noreferrer">Read Reviews →</a>
-      </div>
+    <div class="review-platforms__grid" style="grid-template-columns:1fr;max-width:340px;margin:0 auto;">
       <div class="review-platform">
         <img src="/assets/img/brand-marks/google-reviews.svg" alt="Google Reviews" width="140" height="52" loading="lazy">
-        <p>{{ site.reviewCount }} reviews on Google</p>
+        <p>Rated {{ site.reviewRating }}/5 from {{ site.reviewCount }} reviews on Google</p>
         <a href="{{ site.gbpUrl }}" target="_blank" rel="noopener noreferrer">Read Reviews →</a>
       </div>
     </div>

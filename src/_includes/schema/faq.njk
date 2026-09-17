@@ -6,10 +6,10 @@
     {% for item in faqItems %}
     {
       "@type": "Question",
-      "name": {{ item.q | json }},
+      "name": {{ item.q | json | safe }},
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": {{ item.a | json }}
+        "text": {{ item.a | json | safe }}
       }
     }{% if not loop.last %},{% endif %}
     {% endfor %}

@@ -6,6 +6,8 @@
   { "name": "Milton",         "slug": "milton" },
   { "name": "Burlington",     "slug": "burlington" },
   { "name": "Toronto",        "slug": "toronto" },
+  { "name": "Hamilton",       "slug": "hamilton" },
+  { "name": "Niagara",        "slug": "niagara" },
   { "name": "Streetsville" },
   { "name": "Port Credit" },
   { "name": "Clarkson" },
@@ -39,5 +41,15 @@
   { "name": "Alton Village" },
   { "name": "Brant Hills" },
   { "name": "Orchard" },
-  { "name": "Roseland" }
+  { "name": "Roseland" },
+  { "name": "Niagara Falls" },
+  { "name": "St. Catharines" },
+  { "name": "Welland" },
+  { "name": "Niagara-on-the-Lake" },
+  { "name": "Grimsby" },
+  { "name": "Fort Erie" },
+  { "name": "Ancaster" },
+  { "name": "Dundas" },
+  { "name": "Stoney Creek" },
+  { "name": "Waterdown" }
 ]

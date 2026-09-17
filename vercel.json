@@ -4,6 +4,12 @@
   "outputDirectory": "_site",
   "cleanUrls": true,
   "trailingSlash": true,
+  "redirects": [
+    { "source": "/blog/posts/ontario-heat-pump-rebates/", "destination": "/blog/", "permanent": true },
+    { "source": "/rebates-financing/", "destination": "/", "permanent": true },
+    { "source": "/financing/", "destination": "/", "permanent": true },
+    { "source": "/services/furnace-maintenance/", "destination": "/services/maintenance-plans/", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",
