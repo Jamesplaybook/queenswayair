@@ -57,16 +57,28 @@
   var lightboxImg      = document.getElementById("lightbox-img");
   var lightboxCaption  = document.getElementById("lightbox-caption");
   var lightboxClose    = document.getElementById("lightbox-close");
-  var lightboxTriggers = document.querySelectorAll(".js-lightbox-trigger");
+  var lightboxPrev     = document.getElementById("lightbox-prev");
+  var lightboxNext     = document.getElementById("lightbox-next");
+  var lightboxTriggers = Array.prototype.slice.call(document.querySelectorAll(".js-lightbox-trigger"));
 
   if (lightbox && lightboxImg && lightboxClose && lightboxTriggers.length) {
     var lightboxLastFocused = null;
+    var lightboxIndex = 0;
+    var hasMultiple = lightboxTriggers.length > 1;
 
-    function openLightbox(trigger) {
-      lightboxLastFocused = trigger;
+    function showImage(index) {
+      lightboxIndex = (index + lightboxTriggers.length) % lightboxTriggers.length;
+      var trigger = lightboxTriggers[lightboxIndex];
       lightboxImg.src = trigger.getAttribute("data-lightbox-src") || "";
       lightboxImg.alt = trigger.getAttribute("data-lightbox-alt") || "";
       lightboxCaption.textContent = trigger.getAttribute("data-lightbox-caption") || "";
+    }
+
+    function showNext() { showImage(lightboxIndex + 1); }
+    function showPrev() { showImage(lightboxIndex - 1); }
+
+    function openLightbox(index) {
+      showImage(index);
       lightbox.classList.add("is-open");
       lightbox.setAttribute("aria-hidden", "false");
       document.body.classList.add("lightbox-open");
@@ -81,23 +93,47 @@
       if (lightboxLastFocused) lightboxLastFocused.focus();
     }
 
-    lightboxTriggers.forEach(function (trigger) {
+    lightboxTriggers.forEach(function (trigger, i) {
       trigger.addEventListener("click", function () {
-        openLightbox(trigger);
+        lightboxLastFocused = trigger;
+        openLightbox(i);
       });
     });
 
     lightboxClose.addEventListener("click", closeLightbox);
 
-    // Click on the dark backdrop (not the image/caption/close button) closes it
+    if (hasMultiple) {
+      lightboxPrev.addEventListener("click", showPrev);
+      lightboxNext.addEventListener("click", showNext);
+    } else {
+      lightboxPrev.hidden = true;
+      lightboxNext.hidden = true;
+    }
+
+    // Click on the dark backdrop (not the image/caption/close/nav buttons) closes it
     lightbox.addEventListener("click", function (e) {
       if (e.target === lightbox) closeLightbox();
     });
 
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && lightbox.classList.contains("is-open")) {
-        closeLightbox();
-      }
+      if (!lightbox.classList.contains("is-open")) return;
+      if (e.key === "Escape") closeLightbox();
+      else if (hasMultiple && e.key === "ArrowRight") showNext();
+      else if (hasMultiple && e.key === "ArrowLeft") showPrev();
+    });
+
+    // Touch swipe (left = next, right = previous)
+    var touchStartX = null;
+    lightbox.addEventListener("touchstart", function (e) {
+      touchStartX = e.changedTouches[0].clientX;
+    }, { passive: true });
+    lightbox.addEventListener("touchend", function (e) {
+      if (touchStartX === null || !hasMultiple) return;
+      var deltaX = e.changedTouches[0].clientX - touchStartX;
+      touchStartX = null;
+      if (Math.abs(deltaX) < 40) return;
+      if (deltaX < 0) showNext();
+      else showPrev();
     });
   }
 
