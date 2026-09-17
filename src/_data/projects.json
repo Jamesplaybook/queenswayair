@@ -1,82 +1,62 @@
 [
   {
-    "slug": "furnace-install-mississauga",
-    "title": "Furnace Installation",
-    "area": "Mississauga",
-    "areaSlug": "mississauga",
-    "serviceSlug": "furnace-installation",
-    "date": "2026-08-01",
-    "image": "/assets/img/projects/project-01.jpg",
-    "alt": "New high-efficiency furnace installed in a Mississauga home"
-  },
-  {
-    "slug": "ac-install-oakville",
+    "slug": "project-01",
     "title": "Air Conditioner Installation",
-    "area": "Oakville",
-    "areaSlug": "oakville",
-    "serviceSlug": "ac-installation",
-    "date": "2026-07-18",
+    "image": "/assets/img/projects/project-01.jpg",
+    "alt": "Carrier central air conditioner installed beside a brick home"
+  },
+  {
+    "slug": "project-02",
+    "title": "Air Conditioner Installation",
     "image": "/assets/img/projects/project-02.jpg",
-    "alt": "New central air conditioner installed beside an Oakville home"
+    "alt": "Gree inverter air conditioning unit installed against a brick wall"
   },
   {
-    "slug": "heat-pump-brampton",
-    "title": "Heat Pump Installation",
-    "area": "Brampton",
-    "areaSlug": "brampton",
-    "serviceSlug": "heat-pump-installation",
-    "date": "2026-07-02",
-    "image": "/assets/img/projects/project-03.jpg",
-    "alt": "Air-source heat pump installed outside a Brampton home"
-  },
-  {
-    "slug": "ductless-ac-etobicoke",
+    "slug": "project-03",
     "title": "Ductless AC Installation",
-    "area": "Etobicoke",
-    "areaSlug": "etobicoke",
-    "serviceSlug": "ductless-ac",
-    "date": "2026-06-20",
+    "image": "/assets/img/projects/project-03.jpg",
+    "alt": "Two Panasonic ductless mini-split outdoor units installed on a brick exterior wall"
+  },
+  {
+    "slug": "project-04",
+    "title": "Furnace Installation",
     "image": "/assets/img/projects/project-04.jpg",
-    "alt": "Ductless mini-split indoor unit installed in an Etobicoke home"
+    "alt": "New Goodman gas furnace installed in a home utility closet"
   },
   {
-    "slug": "water-heater-milton",
-    "title": "Water Heater Replacement",
-    "area": "Milton",
-    "areaSlug": "milton",
-    "serviceSlug": "water-heater",
-    "date": "2026-06-05",
+    "slug": "project-05",
+    "title": "Air Conditioner Installation",
     "image": "/assets/img/projects/project-05.jpg",
-    "alt": "New tankless water heater installed in a Milton home"
+    "alt": "Ducane central air conditioner installed beside a brick home"
   },
   {
-    "slug": "furnace-repair-burlington",
-    "title": "Furnace Repair",
-    "area": "Burlington",
-    "areaSlug": "burlington",
-    "serviceSlug": "furnace-repair",
-    "date": "2026-05-22",
+    "slug": "project-06",
+    "title": "Air Conditioner Installation",
     "image": "/assets/img/projects/project-06.jpg",
-    "alt": "Technician repairing a furnace in a Burlington home"
+    "alt": "Carrier central air conditioner installed on a paver patio"
   },
   {
-    "slug": "humidifier-toronto",
-    "title": "Whole-Home Humidifier Installation",
-    "area": "Toronto",
-    "areaSlug": "toronto",
-    "serviceSlug": "humidifiers",
-    "date": "2026-05-10",
+    "slug": "project-07",
+    "title": "Furnace & Water Heater Installation",
     "image": "/assets/img/projects/project-07.jpg",
-    "alt": "Whole-home humidifier installed on a furnace in a Toronto home"
+    "alt": "Carrier furnace and GSW water heater installation"
   },
   {
-    "slug": "fireplace-hamilton",
-    "title": "Gas Fireplace Installation",
-    "area": "Hamilton",
-    "areaSlug": "hamilton",
-    "serviceSlug": "fireplaces",
-    "date": "2026-04-28",
+    "slug": "project-08",
+    "title": "Furnace Installation",
     "image": "/assets/img/projects/project-08.jpg",
-    "alt": "New gas fireplace installed in a Hamilton home"
+    "alt": "Carrier furnace with GeneralAire humidifier installed in a basement"
+  },
+  {
+    "slug": "project-09",
+    "title": "Furnace & Water Heater Installation",
+    "image": "/assets/img/projects/project-09.jpg",
+    "alt": "Lennox furnace and water heater installed in a basement mechanical room"
+  },
+  {
+    "slug": "project-10",
+    "title": "Air Conditioner Installation",
+    "image": "/assets/img/projects/project-10.jpg",
+    "alt": "Trane central air conditioner installed in a backyard"
   }
 ]

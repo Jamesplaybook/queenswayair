@@ -1,0 +1,35 @@
+{# Reusable project photo gallery.
+   Set before including:
+     galleryItems     - array of project objects (required)
+     galleryVariant    - "grid" (full, e.g. /projects/) or "strip" (compact teaser). Default "strip".
+     galleryHeading    - section heading. Default "Our Recent Work" if unset; pass "" to omit the heading entirely.
+     galleryIntro      - optional intro copy.
+     galleryShowLink   - whether to show a "View All Projects" link. Default true.
+#}
+{% set variant = galleryVariant if galleryVariant else "strip" %}
+{% set heading = "Our Recent Work" if galleryHeading is undefined else galleryHeading %}
+{% set tileSizes = "(min-width: 992px) 25vw, (min-width: 576px) 33vw, 50vw" if variant == "grid" else "210px" %}
+
+{% if heading %}
+<div class="section-intro">
+  <div class="container">
+    <h2>{{ heading }}</h2>
+    {% if galleryIntro %}<p>{{ galleryIntro }}</p>{% endif %}
+  </div>
+</div>
+{% endif %}
+<section class="section" style="padding-top:0" aria-label="{{ heading if heading else 'Project photos' }}">
+  <div class="container">
+    <div class="{{ 'project-gallery__grid' if variant == 'grid' else 'project-strip' }}">
+      {% for project in galleryItems %}
+      <a href="{{ project.image }}" target="_blank" rel="noopener" class="project-tile fade-in" aria-label="{{ project.title }} — view full photo">
+        {% image project.image, project.alt, tileSizes, [300,420,600], "" %}
+        <span class="project-tile__caption">{{ project.title }}</span>
+      </a>
+      {% endfor %}
+    </div>
+    {% if galleryShowLink != false %}
+    <p class="text-center" style="margin-top:2rem;"><a href="/projects/" class="btn btn-outline">View All Projects →</a></p>
+    {% endif %}
+  </div>
+</section>

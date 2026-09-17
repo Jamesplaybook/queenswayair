@@ -1128,6 +1128,67 @@ details[open] .faq-chevron { transform: rotate(180deg); }
 .blog-card__excerpt { font-size: var(--text-sm); color: var(--color-muted); flex: 1; margin-bottom: var(--space-4); }
 .blog-card__link { margin-top: auto; }
 
+/* ============================================================
+   PROJECT GALLERY — photo tiles used in both the full-grid
+   (/projects/) and the compact teaser strip embedded on other pages
+   ============================================================ */
+.project-tile {
+  position: relative;
+  display: block;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-bg-alt);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+.project-tile:hover,
+.project-tile:focus-visible { box-shadow: var(--shadow-card-hover); transform: translateY(-2px); }
+.project-tile:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 2px; }
+.project-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-base);
+}
+.project-tile:hover img,
+.project-tile:focus-visible img { transform: scale(1.05); }
+.project-tile__caption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: var(--space-8) var(--space-3) var(--space-3);
+  background: linear-gradient(to top, rgba(15,15,20,0.82) 0%, rgba(15,15,20,0) 100%);
+  color: var(--color-white);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-semi);
+  line-height: 1.3;
+}
+
+.project-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+@media (min-width: 576px) { .project-gallery__grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 992px) { .project-gallery__grid { grid-template-columns: repeat(4, 1fr); gap: var(--space-6); } }
+
+.project-strip {
+  display: flex;
+  gap: var(--space-4);
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  padding-bottom: var(--space-2);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+.project-strip .project-tile {
+  flex: 0 0 auto;
+  width: 168px;
+  scroll-snap-align: start;
+}
+@media (min-width: 768px) { .project-strip .project-tile { width: 210px; } }
+
 .post-content {
   max-width: 72ch;
   margin-inline: auto;

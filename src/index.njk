@@ -186,34 +186,11 @@ description: "Queensway Heating and Cooling — the GTA's trusted HVAC experts. 
 </section>
 
 {# ── RECENT PROJECTS ─────────────────────────────────────────────────────── #}
-<div class="section-intro">
-  <div class="container">
-    <h2>Recent Projects</h2>
-    <p>A look at recent furnace, AC, heat pump, and ductless installations across the GTA, Hamilton, and Niagara.</p>
-  </div>
-</div>
-<section class="section" style="padding-top:0" aria-label="Recent projects">
-  <div class="container">
-    <div class="blog-grid">
-      {% for project in projects | slice(0, 6) %}
-      <article class="blog-card fade-in">
-        <div class="blog-card__img">
-          {% image project.image, project.alt, "(min-width: 992px) 33vw, (min-width: 576px) 50vw, 100vw", [400,640,800], "" %}
-        </div>
-        <div class="blog-card__body">
-          <p class="blog-card__meta">
-            {% if project.areaSlug %}<a href="/service-areas/{{ project.areaSlug }}/">{{ project.area }}</a>{% else %}{{ project.area }}{% endif %}
-          </p>
-          <h3 class="blog-card__title">
-            {% if project.serviceSlug %}<a href="/services/{{ project.serviceSlug }}/">{{ project.title }}</a>{% else %}{{ project.title }}{% endif %}
-          </h3>
-        </div>
-      </article>
-      {% endfor %}
-    </div>
-    <p class="text-center" style="margin-top:2rem;"><a href="/projects/" class="btn btn-outline">View All Projects →</a></p>
-  </div>
-</section>
+{% set galleryItems = projects | slice(0, 6) %}
+{% set galleryVariant = "grid" %}
+{% set galleryHeading = "Recent Projects" %}
+{% set galleryIntro = "A look at recent furnace, AC, heat pump, and ductless installations across the GTA, Hamilton, and Niagara." %}
+{% include "partials/project-gallery.njk" %}
 
 {# ── QUOTE FORM + TESTIMONIAL BAND ───────────────────────────────────────── #}
 <section class="quote-band" aria-label="Request a quote">

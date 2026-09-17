@@ -104,6 +104,10 @@ eleventyComputed:
   </div>
 </section>
 
+{% set galleryItems = projects | slice(0, 8) %}
+{% set galleryHeading = "See Our Work" %}
+{% include "partials/project-gallery.njk" %}
+
 {% include "partials/cta-band.njk" %}
 
 {% block schema %}

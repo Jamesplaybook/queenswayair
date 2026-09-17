@@ -61,6 +61,10 @@ description: "Family-run HVAC company serving Mississauga, the GTA, Hamilton, an
   </div>
 </section>
 
+{% set galleryItems = projects | slice(0, 8) %}
+{% set galleryHeading = "See Our Work" %}
+{% include "partials/project-gallery.njk" %}
+
 {% set ctaTitle = "Let's Talk HVAC" %}
 {% set ctaText = "Call us for a free estimate, or fill out our quick online form and we'll be in touch within the hour." %}
 {% include "partials/cta-band.njk" %}
