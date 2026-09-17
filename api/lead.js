@@ -35,7 +35,7 @@ module.exports = async function handler(req, res) {
   }
 
   // IP rate limit
-  const ip = (req.headers["x-forwarded-for"] || "").toString().split(",")[0].trim() || "unknown";
+  const ip = getClientIp(req);
   const now = Date.now();
   const last = RATE_LIMIT_MAP.get(ip) || 0;
   if (now - last < RATE_LIMIT_MS) {
@@ -92,6 +92,22 @@ module.exports = async function handler(req, res) {
     return error(res, 500, "Failed to send email. Please try again.");
   }
 };
+
+function getClientIp(req) {
+  // x-vercel-forwarded-for is set by Vercel's edge network and reflects the
+  // real client IP — it can't be spoofed by the request itself, unlike
+  // x-forwarded-for, where an attacker can prepend arbitrary fake IPs.
+  const vercelIp = req.headers["x-vercel-forwarded-for"];
+  if (vercelIp) return vercelIp.toString().split(",")[0].trim();
+
+  const xff = req.headers["x-forwarded-for"];
+  if (xff) {
+    const hops = xff.toString().split(",").map(s => s.trim()).filter(Boolean);
+    if (hops.length) return hops[hops.length - 1]; // last hop = nearest trusted proxy
+  }
+
+  return "unknown";
+}
 
 function readRawBody(req) {
   return new Promise((resolve, reject) => {
