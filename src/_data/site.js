@@ -55,7 +55,7 @@ module.exports = {
   reviewRating: 5,
 
   // ── Tracking (leave blank until ready — no empty script tags emitted) ──────
-  gtmId:       "",   // e.g. "GTM-XXXXXXX"
+  gtmId:       "GTM-MWQFW5G5",
   metaPixelId: "",   // e.g. "1234567890"
 
   // ── Default SEO meta (overridden per-page via front matter) ───────────────
