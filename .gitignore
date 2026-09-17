@@ -10,3 +10,5 @@ Thumbs.db
 # Raw/working gallery photos - not final site assets
 gallery_images/
 gallery_images_fixed/
+
+.vercel

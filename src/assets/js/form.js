@@ -57,7 +57,8 @@
       if (!valid) { return; }
 
       // Submit via fetch
-      var data = new FormData(form);
+      var payload = {};
+      new FormData(form).forEach(function (value, key) { payload[key] = value; });
       var submitBtn = form.querySelector("[type=submit]");
       var originalText = submitBtn.textContent;
       submitBtn.disabled = true;
@@ -65,8 +66,8 @@
 
       fetch(form.action, {
         method: "POST",
-        headers: { Accept: "application/json" },
-        body: data,
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload),
       })
         .then(function (res) {
           if (!res.ok) { throw new Error("Server error " + res.status); }
